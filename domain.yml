@@ -1,0 +1,1281 @@
+version: "3.1"
+
+intents:
+  - affirm-en
+  - react_positive-en
+  - goodbye-en
+  - canthelp-en
+  - deny-en
+  - explain-en
+  - greet-en
+  - react_negative-en
+  - thank-en
+  - bot_challenge-en
+  - mood_great-en
+  - mood_unhappy-en
+  - help-en
+  - restart-en
+  - track_mailing-en
+  - out_of_scope/non_english
+  - out_of_scope/other
+  - Esprit-en
+  - contact-en
+  - Esprit-address-en
+  - email-complaint-en
+  - interview-reschedule-en
+  - social_events-en
+  - library-en
+  - cafeteria-en
+  - academic_office-en
+  - director_office-en
+  - students_affair-en
+  - job_rate-en
+  - enter_data
+  - ask_languagesbot-en
+  - human_handoff-en
+  - admission-req-en
+  - join-li-en
+  - bachelor_apply-en
+  - website_apply-en
+  - Specialities-type-en
+  - Engineering_apply-en
+  - test_and_fee_apply-en  
+  - how-admission-en
+  - when-admission-en
+  - past_papers-en
+  - admission_schedule-en
+  - Esprit-courses-en
+  - offered-programs-en
+  - evening-class-en
+  - 3A3B-diff-en
+  - major-info-en
+  - specialite
+  - language
+  - academic_period-en
+  - fee_structure-en
+  - how-finance-en
+  - how-much-en
+  - self_finance-en
+  - hostel-en
+  - hostel_fees-en
+  - hostel_location-en
+  - restaurant-en
+  - mobility-en
+  - internatinal-degree-en
+  - Warning-en
+  - hostel
+  - tunisian
+  - international
+  - admission-req-fr
+  - join-li-fr
+  - bachelor_apply-fr
+  - website_apply-fr
+  - Engineering_apply-fr
+  - test_and_fee_apply-fr 
+  - how-admission-fr
+  - when-admission-fr
+  - past_papers-fr
+  - admission_schedule-fr
+  - Esprit-courses-fr
+  - offered-programs-fr
+  - evening-class-fr
+  - 3A3B-diff-fr
+  - major-info-fr
+  - Specialities-type-fr
+  - academic_period-fr
+  - fee_structure-fr
+  - how-finance-fr
+  - how-much-fr
+  - self_finance-fr
+  - hostel-fr
+  - hostel_fees-fr
+  - hostel_location-fr
+  - restaurant-fr
+  - mobility-fr
+  - internatinal-degree-fr
+  - Warning-fr
+  - affirm-fr
+  - react_positive-fr
+  - goodbye-fr
+  - canthelp-fr
+  - deny-fr
+  - explain-fr
+  - greet-fr
+  - react_negative-fr
+  - thank-fr
+  - bot_challenge-fr
+  - mood_great-fr
+  - mood_unhappy-fr
+  - help-fr
+  - restart-fr
+  - track_mailing-fr
+  - Esprit-fr
+  - contact-fr
+  - Esprit-address-fr
+  - email-complaint-fr
+  - interview-reschedule-fr
+  - social_events-fr
+  - library-fr
+  - cafeteria-fr
+  - academic_office-fr
+  - director_office-fr
+  - students_affair-fr
+  - job_rate-fr
+  - enter_data-fr
+  - ask_languagesbot-fr
+  - human_handoff-fr
+  - out_of_scope_other
+  - out_of_scope_non_english
+  - classe
+  - feedback
+
+
+entities:
+  - name
+  - language
+  - email
+  - nationalite
+  - specialite
+  - hostel
+  - feedback_value
+  - track_status
+  - track_status-fr
+  - classe
+
+slots:      
+  track_status:
+      type: text
+      influence_conversation: false
+      mappings:
+      - type: from_entity
+        entity: track_status
+    
+  track_status-fr:
+      type: text
+      influence_conversation: false
+      mappings:
+      - type: from_entity
+        entity: track_status-fr
+      
+  nationalite:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: nationalite
+
+  email:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: email
+
+  language:
+    type: categorical
+    values:
+      - English
+      - Francais
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: language
+   
+  feedback_value:
+    type: categorical
+    values:
+      - positive
+      - negative
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: feedback_value
+    
+
+  hostel:
+    type: categorical
+    values:
+      - ESPRIT Internal Residence
+      - Al Amen Residence
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: hostel
+
+  specialite: 
+    type: categorical
+    values:
+      - Electromecanique
+      - Génie civil
+      - Informatique
+      - Telecommunication 
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: specialite
+
+  classe:
+    type: categorical
+    values:
+      - Normal Classes
+      - Evening Classes
+      - Preparatory Cycles
+    mappings:
+    - type: from_entity
+      entity: classe
+
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: name
+
+  handoff_to:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: handoff_to
+
+
+
+actions:
+- action_ask_email
+- action_ask_email-fr
+- action_Esprit_link
+- action_Esprit_link-fr
+- action_language
+- action_specialite
+- action_tunisian_international
+- action_hostel
+- action_Reglement_concours_esprit
+- action_Reglement_scolarite_esprit
+- action_electromecanique_pdf
+- action_tic_pdf
+- action_geniecivil_pdf
+- action_pause
+- action_store_bot_language
+- action_greet_user
+- action_greet_user-fr
+- action_location_map
+- action_restart_with_button
+- action_restart_with_button-fr
+- action_tag_feedback
+- action_accept_mailing
+- action_accept_mailing-fr
+- action_classe
+- action_handoff_options
+- action_handoff
+- action_handoff_options-fr
+- action_handoff-fr
+- action_EspritInternal_pic-en
+- action_Alamen_pic-en
+- action_Alamen_pic-fr
+- action_EspritInternal_pic-fr
+- action_restaurant-en
+- action_restaurant-fr
+- action_restaurant-tn-en
+- action_restaurant-tn-fr
+- action_restaurant-int-en
+- action_restaurant-int-fr
+
+
+responses:
+  utter_great-en:
+  - text: "Great! 👍"
+  - text: "That's great! 🙌"
+  - text: "Awesome! 🎉"
+  - text: "Cool, let's do it 🚀"
+
+  utter_ask_name:
+  - text: "What's your name?"
+  utter_ask_more:
+  - text: "Would you like to get more information?"
+  utter_ask_email:
+  - text: "What's your email address?"
+
+  utter_ask_more_details:
+  - text: "Could you be more specific?"
+  - text: "Can you tell me more?"
+
+  utter_greet-en:
+  - text: "Hey! How are you?"
+  - text: "Hey there, my name is EspritBOT."
+  - text: "Hi, I'm EspritBOT!"
+  - text: "Hi! My name's EspritBOT."
+
+  utter_greet_name:
+  - text: "Hi, {name}!"
+  - text: "Hello, {name}!"
+  - text: "Hey, {name}!"
+
+  utter_greet_noname:
+  - text: "Hey!"
+  - text: "Hi!"
+  - text: "Hey there!"
+
+  utter_thumbsup:
+  - text: "👍"
+  - text: "Okay."
+  
+  utter_restart:
+  - text: "Loading... And I've been restarted! 🤯"
+  - text: "Congrats you've restarted me! 😉"
+
+  utter_restart_with_button:
+  - buttons:
+    - payload: /restart
+      title: Restart
+    text: "Click the button below if you want to start over."
+
+  utter_wait_question_en:
+  - text: "Ok, what can I help you with?"
+  utter_not_sure:
+  - text: "Hmm, not sure what you mean..."
+
+  utter_noworries:
+  - text: "No worries!"
+  - text: "You're welcome!"
+  - text: "I'm happy to help."
+
+  utter_anything_else:
+  - text: "Is there anything else I can help you with?"
+
+  utter_awesome:
+  - text: "Awesome, thanks! 👍"
+  - text: "Sweet, thank you! 😄"
+  - text: "Thanks! 👌"
+  - text: "Cool, thank you!"
+
+  utter_canthelp-en:
+  - text: "I'm sorry I couldn't help you. If you have general questions about Esprit, please head to our web site [documentation] (https://esprit.tn/) for more information."
+
+  utter_cheer_up-en:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help-en:
+  - buttons:
+    - payload: /affirm
+      title: 👍
+    - payload: /deny
+      title: 👎
+    text: "Did that help you?"
+
+  utter_ask_feedback:
+  - buttons:
+    - payload: '/feedback{{"feedback_value": "positive"}}'
+      title: 👍
+    - payload: '/feedback{{"feedback_value": "negative"}}'
+      title: 👎
+    text: "How is this conversation going?"
+  utter_contact_email:
+  - text: "You can’t speak to a human directly in this chat, but you can email us at contact@esprit.tn"
+
+  utter_default:
+  - text: "Sorry, I didn't get that 🤷. Could you please rephrase?"
+  - text: "I didn't understand, could you rephrase that?"
+  - text: "I'm sorry, but I didn't understand you. Could you please rephrase what you just said?"
+  - text: "I'm afraid I didn't get what you just said. Could you rephrase that?"
+  - text: "I didn't quite get that, could you rephrase your message?"
+  - text: "Could you rephrase your message? I didn't get it, I'm sorry."
+  utter_possibilities-en:
+  - text: "You can ask me about:
+          - Esprit Private School
+          - Admission and fee structure in Esprit,
+          - Program offred 
+          - Academic office , Director office , Students affair "
+
+  utter_not_sure-en:
+  - text: "Hmm, not sure what you mean..."
+
+  utter_out_of_scope_non_english:
+  - text: "I only understand English or French, I'm sorry."
+  utter_out_of_scope_other:
+  - text: "I can't help you with that, I'm sorry."
+  utter_happy-en:
+  - text: "Great, carry on!"
+
+  utter_goodbye_en:
+  - text: "Goodbye!"
+  - text: "Bye!"
+  - text: "Ciao!"
+  - text: "Bye, was nice talking to you!"
+  - text: "Bye bye!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Esprit."
+  - text: "Yep, I'm a bot!"
+  - text: "Yes, I'm a bot."
+  - text: "Yep, you guessed it, I'm a bot!"
+  - text: "I am Esprit bot 🤖"
+  - text: "I'm not a human, I'm a bot! 🤖"
+
+  utter_ask_handoff-en:
+  - text: "It looks like you want to be transferred to a human agent."
+  utter_handoff:
+  - text: "Alright, I'll try to transfer you."
+  utter_wouldve_handed_off:
+  - text: "If you were talking to me via chatroom, I would have handed you off to {handoffhost}."
+  utter_no_handoff:
+  - text: "Since you haven't configured a host to hand off to, I can't send you anywhere!"
+  utter_ask_whatelse:
+  - text: "What else can I help you with?"
+  utter_ask_moreinfo:
+  - text: "Do you want more information?"
+  utter_nohelp-en:
+  - text: "For now that's all I can do, so feel free to try it out. If you have any suggestions for what I should learn, let me know!"
+  utter_react_negative-en:
+  - text: "😕"
+  - text: "😞"
+  - text: "😥"
+  - text: "😢"
+  utter_react_positive-en:
+  - text: "😄"
+  - text: "😊"
+  - text: "👏"
+  - text: "😍"
+  utter_Esprit-en:
+  - text: "With more than 5,000 students and 240 permanent teachers, Esprit is the largest private institution of higher education in Tunisia. Founded in 2003, it quickly forged a reputation for excellence, thanks to its proximity to the entrepreneurial world, its partnerships with international universities, and its method of learning by problems and projects."
+  - text: "L'École supérieure privée d'ingénierie et de technologie (arabe : المدرسة العليا الخاصة للهندسة و التكنولوجيا) ou ESPRIT is a private engineering school in Tunisia based in Ariana and approved by the Ministry of Higher Education and Scientific Research (approval no. 2003-03). To know more about Esprit show this video : "
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=wHMWYD-Yhrs&list=TLGGCwkT4D_h--UwNDA4MjAyMg" } }
+  
+  utter_contact_en:
+  - text: "Contact Us :
+          - 🏙 Adress : 1, 2 rue André Ampère - 2083 - Pôle Technologique - El Ghazala.
+          - 📧 Email : contact@esprit.tn
+          - ☎ Phone : (216) 70 250 000 "
+
+  utter_Esprit_adress-en:
+  - text: "ESPRIT has three sites: the first with which it started, in the industrial zone of Charguia 2, and the main site located in the area bordering the Technopôle des Communications, in the industrial zone with a technological vocation in Chotrana, and a third site in addition to the other two at Charguia 2. 
+          - Esprit Prépa in Cebalat Ben Ammar and ESPRIT 
+          - Night Schools in 18 Rue de l'Usine, Tunis 2035"
+  utter_schedule-en:
+  - text: "Admission are opened once in a year in May/June/July/August. 
+          Admission schedule for the 2022-2023 academic year : 
+                Session    Pre-insecription              Tests                              Results
+          ✍   First      From 13 may To 17 june         From 13 june To 17 june           18 june
+          ✍   Second     From 17 june To 28 july        From 22 june To 29 july           30 july
+          ✍   Third      From 28 july To 07 august      From 08 august To 19 august       20 august      
+  
+        To see more information about the admission schedule and test dates please visit this link [documentation] (https://esprit.tn/admission/esprit-ingenieur)"
+    image: "https://imgur.com/a/kbOWmNz"
+
+  utter_admission_req_en:
+  - text: "For this 2022/2023 academic year, the tests will take place online or face-to-face according to the choice of the candidate. 
+           To get information about admission please visit [documentation] (https://esprit.tn/admission/esprit-ingenieur)"
+
+  utter_join_li_en:
+  - text: "All holders of a scientific baccalaureate (Tunisian or international) can apply. The access criteria are based on:
+
+            - The results of the last 3 years in high school.
+            - Baccalaureate results.
+            - An interview with an admissions committee for Tunisians."
+
+  utter_bachelor_apply-en:
+  - text: "For this 2022/2023 academic year, the admition test will take place online or face-to-face according to the choice of the candidate:
+            In 1st year: Hold a scientific, economic or technical baccalaureate."
+
+  utter_website_apply-en:
+  - text: "To apply at Esprit follow link  💻 https://esprit.tn/admission/esprit-ingenieur"
+
+  utter_Engineering_apply-en:
+  - text: "Currently two engineering courses are offered; a course during the day and a course during the evening. We have three fields of Engineering : Electromecanique, Civil engineering and TIC. 
+          💻 Detailed courses is available at: https://esprit.tn/formation/esprit-ingenieur/presentation.
+          💻 Detailed programs and specialite can be viewed at [documentation] (https://esprit.tn/formation/esprit-ingenieur/specialites-et-options)"
+
+  utter_test_and_fee_apply-en:
+  - text: " Registrations for the test are made exclusively online on the website [documentation] (https://esprit.tn/) -admission section.
+            The candidate provides all the details necessary for the acceptance of his registration and chooses the days and times of the exams.
+            The information provided by the candidate during the online registration procedure is binding his responsibility.
+            Once registered online, the candidate receives a confirmation email which includes a identifier and a password allowing him to return to his file and which acts as summons to the tests.
+            The adimission Tests are free and available for all candidate."
+  utter_how_admission_en:
+  - text: "Registrations for the admission are made exclusively online on the website: [documentation] (https://esprit.tn/admission).
+          The candidate provides all the details necessary for the acceptance of his registration and chooses the days and times of the exams."
+  
+  utter_when_admission_en:
+  - text: "Admission are opened once in a year in May/June/July/August. To see the admission schedule and test dates please visit this link [documentation] (https://esprit.tn/admission/esprit-ingenieur)" 
+  
+  utter_past_papers-en:
+  - text: " the candidate takes written tests and an oral interview:
+          - The written tests consist of language tests (English/French), scientific and psychotechnical These tests are done online.
+          - For the oral interview, the candidate undergoes a motivational interview lasting 15 minutes before a committee."
+  utter_admission_schedule-en:
+  - text: "To see the admission schedule and test dates please visit this link: [documentation] (https://esprit.tn/admission/esprit-ingenieur)"
+    image: "https://imgur.com/a/kbOWmNz"
+
+  utter_Esprit_courses-en:
+  - text: "you can choose only one courses during the day or the evening.
+         The university offer four type of courses : Esprit prepa, Esprit Engineer , Evening classes and Executive MBA: 
+           ✔ More details about Esprit prepa at [documentation] (https://prepa.esprit.tn/)
+           ✔ More details about Esprit Engineer at [documentation] (https://esprit.tn/formation/esprit-ingenieur/presentation)
+           ✔ More details about Evening classes at [documentation] (https://esprit.tn/formation/formation-continue/cours-du-soir)
+           ✔ More details about EMBA at [documentation] (https://esprit.tn/EMBA)"
+  
+  utter_offered_programs-en:
+  - text: "Currently two engineering courses are offered; a course during the day and a course during the evening. We have three fields of Engineering : Electromecanique, Civil engineering and TIC. Detailed courses is available at: https://esprit.tn/formation/esprit-ingenieur/presentation.
+          Detailed programs and specialite can be viewed at [documentation] (https://esprit.tn/formation/esprit-ingenieur/specialites-et-options)"
+
+  - text: "Esprit offer four type of courses : Esprit prepa, Esprit Engineer , Evening classes and Executive MBA . 
+           ✔ More details about Esprit prepa at [documentation] (https://prepa.esprit.tn/)
+           ✔ More details about Esprit Engineer at [documentation] (https://esprit.tn/formation/esprit-ingenieur/presentation)
+           ✔ More details about Evening classes at [documentation] (https://esprit.tn/formation/formation-continue/cours-du-soir)
+           ✔ More details about EMBA at [documentation] (https://esprit.tn/EMBA)"
+
+  utter_evening-class-en:
+  - text: "ESPRIT- Evening Class offers engineering training for professionals, academics and job seekers, holders of a bachelor's degree or more.
+           ESPRIT- Evening Class offers 4 degree courses:
+
+                ✔ Informatique (with three Specialization Options: Business Intelligence, Software Engineering, Cloud Computing)
+                ✔ Telecommunication
+                ✔ Civil Engineering
+                ✔ Electro-mechanical engineering (with two specialization Options: OGI Option (Industrial Organization And Management), Mechatronics Option).
+
+
+           ⭐ Duration: The studies last four years (3 years if the candidate holds a master's or master's degree).
+           ⭐ Timing: Classes take place over 10 months every evening from 6:30 p.m. to 8:30 p.m. and on Saturdays from 2 p.m. to 6 p.m.
+           ⭐ Condition: The admission conditions are the same as for the current cycle of the day, so it is an admission by competition: file, tests and motivational interview.
+           ⭐ Fees: Tuition fees are 6500 D.T. with TVA per year, with the possibility of financing by the TFP rebate for companies."
+
+  utter_3A3B_diff_en:
+  - text: " ⭐ In the 3rd year 3A: students holding a license in the specialty chosen.
+            ⭐ In the 3rd year 3B: students holding a generalist degree in science OR technology / Students declared admitted to the main list or to additional list for national competitions for access to engineering studies (MP, PC, Techno)."
+  
+  utter_major_info_en:
+  - text: "The duration of study at ESPRIT for obtaining the Engineering degree is:
+          - Five years for candidates with the baccalaureate as their last diploma university
+          - Three years for candidates who have been admitted to the National Entrance Examinations for Engineering schools, or having a higher technician diploma, or a license or any other equivalent scientific or technical degree.
+          - Two years for candidates who have been admitted to the 2nd Master or 2nd year engineering course" 
+  - text: "Esprit offer four type of courses : Esprit prepa, Esprit Engineer , Evening classes and Executive MBA . 
+          -More details about Esprit prepa at https://prepa.esprit.tn/
+          -More details about Esprit Engineer at https://esprit.tn/formation/esprit-ingenieur/presentation
+          -More details about Evening classes at https://esprit.tn/formation/formation-continue/cours-du-soir
+          -More details about EMBA at https://esprit.tn/EMBA"
+  - text: "In Esprit we have three Ingeneering Specialities:
+          ⭐ Electromecanique 
+          ⭐ Civil Engineering
+          ⭐ TIC 
+           For detailed informations about options in Esprit visit https://esprit.tn/formation/esprit-ingenieur/specialites-et-options"
+  
+  utter_Specialities-type_en:
+  - text: "The specialties correspond perfectly to the growing diversification of professions in the information society.
+          Particular emphasis is placed on human qualities, management skills, the ability to work in a multicultural context and accountability in the face of the power of technologies, of which Esprit graduates will be experts.
+          For detailed informations about options in Esprit visit https://esprit.tn/formation/esprit-ingenieur/specialites-et-options:
+          You can watch too this interesting video about Projects ball:"
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=ZzWlMZRRj4w" } }
+  
+  utter_Specialities-info_en:        
+  - text: "Informatique Specialities in Esprit : 
+          ⭐ Option Infini (Financial Informatique and Engineering)
+          ⭐ Option DS (Data Science)
+          ⭐ Option Software Architecture Engineering
+          ⭐ Option ArcTIC (Architecture IT and Cloud Computing)
+          ⭐ Option NIDS (Network Infrastructure And Data Security)
+          ⭐ Option SE (Software Engineering)
+          ⭐ Option TWIN (Web and Internet Technologies)
+          ⭐ Option ERP-BI (Enterprise Resource Planning-Business Intelligence)
+          ⭐ Option SIM (Informatique Systemes and Mobiles)
+          ⭐Option SLEAM : (Ambient Embedded Systems And Software and Mobiles)
+          For detailed informations about options in Esprit visit https://esprit.tn/formation/esprit-ingenieur/specialites-et-options
+          "
+  utter_Specialities-em_en:
+  - text: "Electromecanique Specialities in Esprit : 
+          ⭐ Option Mechatronics 
+          ⭐ Option OGI (Industrial organization and management)
+          For detailed informations about options in Esprit visit https://esprit.tn/formation/esprit-ingenieur/specialites-et-options
+          "
+
+  utter_Specialities-tc_en:
+  - text: "Telecommunication Specialities in Esprit : 
+          ⭐ Option WIN (Wireless Intelligent Networks)
+          ⭐ Option IoSyS (Internet Of Things Systems & Services)
+          For detailed informations about options in Esprit visit https://esprit.tn/formation/esprit-ingenieur/specialites-et-options
+          "
+
+  utter_Specialities-gc_en:
+  - text: "Genie Civil Specialities in Esprit : 
+          ⭐ Optional UE: O And G (Oil And Gas Engineering) 
+          ⭐ Optional UE: Structures And Works
+          For detailed informations about options in Esprit visit https://esprit.tn/formation/esprit-ingenieur/specialites-et-options
+          "
+
+  utter_academic_period-en:
+  - text: "Academic period starts from August and Ends in June. Detailed schedule will be available in your inbox after finishing the inscription process"
+
+  utter_fee_structure_tn_nc-en:
+  - text: "For Tunisien Student Fee structure was:
+        ✔ Normal Classes: 
+           ⭐ Registered in 2017/2018 : 6 700 DT
+           ⭐ Registered in 2018/2019 : 7 000 DT
+           ⭐ Registered in 2019/2020 : 7 350 DT
+           ⭐ Registered in 2020/2021 : 7 350 DT 
+           ⭐ Registered in 2021/2022 : 7 700 DT
+           ⭐ Registered in 2022/2023 : 7 900 DT"
+    image: "https://imgur.com/7gNgeMS"
+  
+  utter_fee_structure_tn_ec-en:
+  - text: "For Tunisien Student Fee structure was:
+        ✔ Evening Classes:
+           ⭐ Registered in 2018/2019 : 5 900 DT
+           ⭐ Registered in 2019/2020 : 6 200 DT
+           ⭐ Registered in 2020/2021 : 6 200 DT 
+           ⭐ Registered in 2021/2022 : 6 200 DT
+           ⭐ Registered in 2022/2023 : 6 500 DT"
+    image: "https://imgur.com/a/9c8NecN"
+
+  utter_fee_structure_tn_pc-en:
+  - text: "For Tunisien Student Fee structure was:
+        ✔ Preparatory Cycles:
+           ⭐ Registered in 2020/2021 : 9 000 DT 
+           ⭐ Registered in 2021/2022 : 9 000 DT
+           ⭐ Registered in 2022/2023 : 9 400 DT"
+    image: "https://imgur.com/a/vrgWcxP"
+
+  utter_fee_structure_int_nc-en:
+  - text: "For International Student Fee structure without hostel was:
+        ✔ Normal Classes: 
+           ⭐ Old Student in Esprit: 3 000 €
+           ⭐ New Student : 3 000 €"
+    image: "https://imgur.com/a/XEEWUiy"
+
+  utter_fee_structure_int_ec-en:
+  - text: "No evening classes in Esprit for International Student" 
+
+  utter_fee_structure_int_pc-en:
+  - text: "For International Student Fee structure without hostel was:
+        ✔ Preparatory Cycles:
+           ⭐ Old Student in Esprit: 3 500 €
+           ⭐ New Student : 3 500 € "
+    image: "https://imgur.com/a/7IJzSef"
+
+  utter_how-finance_en:
+  - text: "- Possibility of financing through the mechanism for granting loans governed by the ESPRIT Foundation. [esprit-finance](www.esprit-fondation.tn)
+          - Possibility of financing through a bank loan granted in application of the terms of the agreements entered into with Banque Zitouna or UBCI.
+          - Ease of payment of up to 36 monthly installments.
+           you find the payment information, the RIB and the BIC below:"
+    image: "https://imgur.com/a/Q1JCI7s"
+
+  utter_how-much_tn_nc-en:
+  - text: "For Tunisien Student Fee structure for Normal Classes was:"
+    image: "https://imgur.com/7gNgeMS"
+
+  utter_how-much_tn_ec-en:
+  - text: "For Tunisien Student Fee structure for Evening Classes was:"
+    image: "https://imgur.com/a/9c8NecN"
+  
+  utter_how-much_tn_pc-en:
+  - text: "For Tunisien Student Fee structure for Preparatory Cycles was:"
+    image: "https://imgur.com/a/vrgWcxP"
+
+  utter_how-much_int_nc-en:
+  - text: "For International Student Fee structure for Normal Classes without hostel was:"
+    image: "https://imgur.com/a/XEEWUiy"
+
+  utter_how-much_int_ec-en:
+  - text: "No evening classes in Esprit for International Student"
+
+  utter_how-much_int_pc-en:
+  - text: "For International Student Fee structure for Preparatory Cycles without hostel was:"
+    image: "https://imgur.com/a/7IJzSef"
+
+  utter_self-en:
+  - text: "No self-finance seats are offered at Esprit."
+  
+  utter_hostel_en:
+  - text: " * online pre-registrations at the foyer from July 1, 2022 until availability is exhausted
+            * The renewal of registrations at the home for girls and prep students is from June 01, 2022 to June 15, 2022.
+          Detailed information about inscription in hostel and restaurant is avalaible at: [documentation] (https://esprit.tn/vie-etudiante/rentree-scolaire/logement-restauration)"   
+  utter_hostel_fees-tn-en:
+  - text: "The annual fees for accommodation in the ESPRIT hostel for the 2022/2023 academic year amount to:
+
+            Amenities                                       Amount including TVA
+
+            Double room                                     2 500 DT
+            Apartment for 4 people: S+1                     2 600 DT
+            Apartment for 6 people: S+2                     2 600 DT
+            "
+    image: "https://imgur.com/a/sls9xxr"
+
+  utter_hostel_fees-int-en:
+  - text: "The annual fees for accommodation in the ESPRIT hostel for the 2022/2023 academic year amount to:
+
+            Amenities                                       Amount including TVA
+
+            Double room                                     900 €
+            Triple room                                     800 €
+            "
+    image: "https://imgur.com/a/q8zipM7"
+
+  utter_hostel_location-en:
+  - text: "Esprit has two residence :
+           🏙 ESPRIT Internal Residence
+           🏙 Al Amen Residence 
+           "
+
+  utter_Alamen_pic-en:
+  - text: "Here are the pictures of Al Amen Residence:"
+
+  utter_EspritInternal_pic-en:
+  - text: "Here are the pictures of ESPRIT Internal Residence:"
+
+  utter_restaurant-en:
+  - text: "The restaurant is accessible to all resident and non-resident students at the hostel.
+           Here are the pictures of Esprit Restaurant:"
+
+  utter_restaurant-tn-en:
+  - text: "The price list for Tunisian Student was :"
+
+  utter_restaurant-int-en:
+  - text: "The price list for International Student was :"
+
+  utter_mobility_en:
+  - text: "The international aspect can intervene in the course even of the students of Esprit can acess to the mobility and the international experience:
+          -For a semester of study in one of the partner universities and an internship, which replaces the 5th year at Esprit, the student then obtains the Esprit engineering degree.
+          -For 2 full years: the student obtains two diplomas jointly: the Esprit diploma and the Master's degree from the foreign partner institution.
+          Detailed informations is available at: [documentation] (https://esprit.tn/international/experience)"
+
+  utter_internatinal-degree_en:
+  - text: "The International Degree Program is a program that will entirely and exclusively be conducted in English. It provides English-language instruction in an English-speaking environment, i.e., by adopting an English-language curriculum.
+          For International Degree Program visit this link: https://esprit.tn/InternationalDegreeProgram"
+  - text: "The International Degree Program aims to train bilingual ICT engineers for a promising international career.
+          It also facilitates the integration of English-speaking students into Esprit's educational system as well as their potential academic and professional reintegration in their home country.
+          The International Degree Program will welcome both Tunisian and international students in the same class, offering them the possibility to follow scientific and technical education (lessons, tutorials, practicals and projects...) exclusively in English, with respect to Esprit's pedagogical approaches." 
+  utter_Warning-en:
+  - text: "The ECTS system is a student-centred credit transfer and accumulation system. 
+          He is based on the transparency of the results and the learning process. 
+          It aims to facilitate the planning, delivery, assessment, recognition and validation of qualifications and units of teaching.
+          In the ECTS system, the formulation of learning outcomes constitutes the basis for workload assessment, and therefore credit adequacy. 
+          The ECTS credits are allocated to study programs and their various components pedagogical courses designated by the teaching units (for example courses, dissertations, internships, work in laboratory, etc)."
+  - text: "60 ECTS credits correspond to the workload of a full-time year within the framework of an educational program. 
+          In most cases, the student workload is 1500 at 1800 hours for one academic year, i.e. between 50 and 60 hours per week, the value a credit representing 25 to 30 hours of work. 
+          Each UE is assigned a number of ECTS credits which also corresponds to the coefficient used to calculate the average general."
+    
+  utter_email-complaint_en:
+  - text: "For any information or problem about admission contact:  reclamation.admission2223@esprit.tn"
+  
+  utter_interview-reschedule_en:
+  - text: "For any information or complaints about interview contact:  reclamation.admission2223@esprit.tn"
+  
+  
+  utter_social_events-en:
+  - text: "The Student Life Department: The role of the department is to support students in their projects, to promote their commitments within the school and to facilitate their daily life."
+  - text: "Clubs ESPRIT: Within Esprit, associations and clubs fulfill several roles given the diversity of motivations that drive those who are at their origin. Aware of the importance of community life, students play an important role in developing and transmitting messages to recipients."
+  - text: "Listening Cell: The listening and support unit is a confidential space which aims to welcome, listen, understand, inform and guide ESPRIT students."
+
+  utter_job-en:
+  - text: "Job rate of Esprit is almost 100%"
+
+  utter_library-en:
+  - text: "Library facility is available in every campus. The library is an information and documentation service available to students, teachers, researchers, administrative and technical staff, as well as an person authorized by the University Management."
+
+  utter_cafeteria-en:
+  - text: "Cafeteria facility is available in every campus"
+
+  utter_director_office-en:
+  - text: "Director office is situated at Bloc E Principal site (El-Ghazela)"
+
+  utter_students_affair-en:
+  - text: "Student's affair department is located in Bloc A Principal site (El-Ghazela)"
+
+  utter_academic_office-en:
+  - text: "For any question contact Mr Mourad ZERAI Email : mourad.zerai@esprit.tn
+          each academic formation admits a person in charge, you can find the complete list in this link: https://esprit.tn/esprit/gouvernance/services-esprit"
+
+
+###francais 
+
+
+  utter_great-fr:
+  - text: "Génial! 👍"
+  - text : "C'est super! 🙌"
+  - text : "Génial ! 🎉"
+  - text : "Cool, on y va 🚀"
+
+  utter_ask_name-fr:
+  - text: "Quel est votre nom?"
+  utter_ask_more-fr:
+  - text: "Souhaitez-vous obtenir plus d'informations ?"
+  utter_ask_email-fr:
+  - text: "Quelle est votre adresse e-mail?"
+
+  utter_ask_more_details-fr:
+  - text: "Pourriez-vous être plus précis?"
+  - text: "pouvez-vous m'en dire plus?"
+
+  utter_greet-fr:
+  - text: "bonjour! Comment vas-tu?"
+  - text: "Salut, je m'appelle EspritBOT."
+  - text: "Salut, je suis EspritBOT!"
+  - text: "Salut! Je m'appelle EspritBOT."
+
+  utter_greet_name-fr:
+  - text: "salut, {name}!"
+  - text: "bonjour, {name}!"
+
+
+  utter_greet_noname-fr:
+  - text: "salut!"
+  - text: "bonjour!"
+  
+  utter_restart-fr:
+  - text: "Chargement... Et j'ai été redémarré! 🤯"
+  - text: "Félicitations, vous m'avez redémarré ! 😉"
+
+  utter_restart_with_button-fr:
+  - buttons:
+    - payload: /restart
+      title: Restart
+    text: "Cliquez sur le bouton ci-dessous si vous voulez recommencer."
+
+  utter_wait_question_fr:
+  - text: "Ok, en quoi puis-je vous aider?"
+  utter_not_sure-fr:
+  - text: "Hmm, Pas sûr de ce que vous voulez dire..."
+
+  utter_noworries-fr:
+  - text: "Pas de soucis!"
+  - text: "De rien!"
+  - text: "Je suis heureux de vous aider."
+
+  utter_anything_else-fr:
+  - text: "Y a-t-il autre chose que je puisse vous aider?"
+
+  utter_awesome-fr:
+  - text: "Génial, merci! 👍"
+  - text: "Doux, merci ! 😄"
+  - text: "Merci ! 👌"
+  - text: "Cool, merci!"
+
+  utter_canthelp-fr:
+  - text: "Je suis désolé de ne pas avoir pu vous aider. Si vous avez des questions d'ordre général sur Esprit, veuillez vous rendre sur notre site Web [documentation] (https://esprit.tn/) pour plus d'informations."
+
+  utter_cheer_up-fr:
+  - text: "Voici de quoi vous remonter le moral:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help-fr:
+  - buttons:
+    - payload: /affirm
+      title: 👍
+    - payload: /deny
+      title: 👎
+    text: "Cela vous a-t-il aidé ?"
+
+  utter_ask_feedback-fr:
+  - buttons:
+    - payload: '/feedback{{"feedback_value": "positive"}}'
+      title: 👍
+    - payload: '/feedback{{"feedback_value": "negative"}}'
+      title: 👎
+    text: "Comment se passe cette conversation ?"
+  utter_contact_email-fr:
+  - text: "Vous ne pouvez pas parler directement à un humain dans ce chat, mais vous pouvez nous envoyer un e-mail à contact@esprit.tn"
+
+  utter_default-fr:
+  - text: "Désolé, je n'ai pas compris 🤷. Pourriez-vous s'il vous plaît reformuler?"
+  - text: "je n'ai pas compris, pouvez-vous reformuler?"
+  - text: "je suis désolé, mais je ne vous ai pas compris. Pourriez-vous s'il vous plaît reformuler ce que vous venez de dire?"
+  - text: "j'ai bien peur de ne pas avoir compris ce que vous venez de dire. Pourriez-vous reformuler cela?"
+  - text: "je n'ai pas bien compris, pouvez-vous reformuler votre message?"
+  - text: "Pourriez-vous reformuler votre message? Je n'ai pas compris, je suis désolé."
+  utter_possibilities-fr:
+  - text: " Vous pouvez me demander :
+          - Ecole Privée Esprit
+          - Admission et tarification dans Esprit,
+          - Programme offert
+          - Bureau académique , Bureau directeur , bureau Affaires étudiantes"
+
+  utter_happy-fr:
+  - text: "Super, continuez !"
+
+  utter_goodbye_fr:
+  - text: "Au revoir !"
+  - text: "au revoir !"
+  - text: "Ciao!"
+  - text: "Au revoir, c'était sympa de te parler!"
+
+  utter_iamabot-fr:
+  - text: "Je suis un bot, developé par Esprit."
+  - text: "Oui, je suis un bot!"
+  - text: "Oui, je suis un bot."
+  - text: "Oui, vous l'avez deviné, je suis un bot!"
+  - text: "Je suis Esprit bot 🤖"
+  - text: "Je ne suis pas un humain, je suis un bot ! 🤖"
+
+  utter_ask_handoff-fr:
+  - text: "On dirait que vous voulez être transféré à un agent humain."
+  utter_handoff-fr:
+  - text: "D'accord, je vais essayer de vous transférer."
+  utter_wouldve_handed_off-fr:
+  - text: "Si tu me parlais via chatroom, je t'aurais remis à {handoffhost}."
+  utter_no_handoff-fr:
+  - text: "Puisque vous n'avez pas configuré d'hôte à qui transférer, je ne peux pas vous envoyer n'importe où!"
+  utter_ask_whatelse-fr:
+  - text: "En quoi d'autre puis-je vous aider?"
+  utter_ask_moreinfo-fr:
+  - text: "Voulez-vous plus d'informations?"
+  utter_nohelp-fr:
+  - text: "Pour l'instant, c'est tout ce que je peux faire, alors n'hésitez pas à l'essayer. Si vous avez des suggestions sur ce que je devrais apprendre, faites le moi savoir!"
+  utter_react_negative-fr:
+  - text: "😕"
+  - text: "😞"
+  - text: "😥"
+  - text: "😢"
+  utter_react_positive-fr:
+  - text: "😄"
+  - text: "😊"
+  - text: "👏"
+  - text: "😍"
+  utter_Esprit-fr:
+  - text: "Avec plus de 5 000 étudiants et 240 enseignants permanents, Esprit est le plus grand établissement privé d'enseignement supérieur en Tunisie. Fondée en 2003, elle s'est rapidement forgée une réputation d'excellence, grâce à sa proximité avec le monde entrepreneurial, ses partenariats avec des universités internationales, et sa méthode d'apprentissage par problèmes et projets."
+  - text: "L'École supérieure privée d'ingénierie et de technologie (arabe : المدرسة العليا الخاصة للهندسة و التكنولوجيا) ou ESPRIT est une école d'ingénieurs privée en Tunisie basée à l'Ariana et agréée par le Ministère de l'Enseignement Supérieur et de la Recherche Scientifique (agrément n° 2003- 03). Pour en savoir plus sur Esprit, regardez cette vidéo : "
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=wHMWYD-Yhrs&list=TLGGCwkT4D_h--UwNDA4MjAyMg" } }
+  
+  utter_contact_fr:
+  - text: "Contactez-nous :
+          - 🏙 Adresse : 1, 2 rue André Ampère - 2083 - Pôle Technologique - El Ghazala.
+          - 📧 Email : contact@esprit.tn
+          - ☎ telephone : (216) 70 250 000"
+
+  utter_Esprit_adress-fr:
+  - text: "ESPRIT dispose de trois sites : le premier avec lequel il a commencé, dans la zone industrielle de Charguia 2, et le site principal situé dans la zone limitrophe du Technopôle des Communications, dans la zone industrielle à vocation technologique à Chotrana, et un troisième site à en plus des deux autres à Charguia 2.
+           - Esprit Prépa à Cebalat Ben Ammar et ESPRIT
+           - Ecoles du soir au 18 Rue de l'Usine, Tunis 2035"
+  utter_schedule-fr:
+  - text: "Les admissions sont ouvertes une fois par an en mai/juin/juillet/août.
+           Calendrier d'admission pour l'année scolaire 2022-2023 : 
+                Session    Pre-insecription              Tests                              Résultats
+          ✍   First      De 13 mai Au 17 juin           De 13 juin Au 17 juin              18 juin
+          ✍   Second     De 17 juin Au 28 juillet       De 22 juin Au juillet              30 juillet
+          ✍   Third      De 28 juillet Au 07 août       De 08 août Au 19 août              20 août      
+  
+        Pour voir plus d'informations sur le calendrier d'admission et les dates des tests, veuillez visiter ce lien [documentation] (https://esprit.tn/admission/esprit-ingenieur)"
+    image: "https://imgur.com/a/kbOWmNz"
+
+  utter_admission_req_fr:
+  - text: "Pour cette année académique 2022/2023, les épreuves se dérouleront en ligne ou en présentiel selon le choix du candidat.
+            Pour obtenir des informations sur l'admission, veuillez visiter [documentation] (https://esprit.tn/admission/esprit-ingenieur)"
+  utter_join_li_fr:
+  - text: "Tous les titulaires d'un baccalauréat scientifique (tunisien ou international) peuvent postuler. Les critères d'accès sont basés sur :
+
+             - Les résultats des 3 dernières années au lycée.
+             - Résultats du baccalauréat.
+             - Un entretien avec une commission d'admission pour les Tunisiens."
+
+  utter_bachelor_apply-fr:
+  - text: "Pour cette année académique 2022/2023, le test d'admission se déroulera en ligne ou en présentiel selon le choix du candidat :
+             En 1ère année : Etre titulaire d'un baccalauréat scientifique, économique ou technique."
+
+  utter_website_apply-fr:
+  - text: "Pour postuler chez Esprit suivez le lien 💻 https://esprit.tn/admission/esprit-ingenieur"
+
+  utter_Engineering_apply-fr:
+  - text: "Actuellement, deux cours d'ingénierie sont offerts; un cours en journée et un cours en soirée. Nous avons trois domaines d'Ingénierie : Électromécanique, Génie civil et TIC.
+           💻 Les cours détaillés sont disponibles sur : https://esprit.tn/formation/esprit-ingenieur/presentation.
+           💻 Les programmes détaillés et la spécialité sont consultables sur [documentation] (https://esprit.tn/formation/esprit-ingenieur/specialites-et-options)"
+  utter_test_and_fee_apply-fr:
+  - text: " Les inscriptions au test se font exclusivement en ligne sur le site [documentation] (https://esprit.tn/) - rubrique admission.
+             Le candidat fournit toutes les informations nécessaires à l'acceptation de son inscription et choisit les jours et heures des examens.
+             Les informations fournies par le candidat lors de la procédure d'inscription en ligne engagent sa responsabilité.
+             Une fois inscrit en ligne, le candidat reçoit un email de confirmation qui comprend un identifiant et un mot de passe lui permettant de revenir sur son dossier et qui fait office de convocation aux épreuves.
+             Les tests d'admission sont gratuits et disponibles pour tous les candidats."
+  utter_how_admission_fr:
+  - text: "Les inscriptions à l'admission se font exclusivement en ligne sur le site : [documentation] (https://esprit.tn/admission).
+           Le candidat fournit toutes les précisions nécessaires à l'acceptation de son inscription et choisit les jours et heures des examens."
+  utter_when_admission_fr:
+  - text: "Les admissions sont ouvertes une fois par an en mai/juin/juillet/août. Pour voir le calendrier d'admission et les dates des tests, veuillez visiter ce lien [documentation] (https://esprit.tn/admission/esprit-ingenieur)"  
+  utter_past_papers-fr:
+  - text: " le candidat passe des épreuves écrites et un entretien oral :
+           - Les épreuves écrites consistent en des épreuves linguistiques (anglais/français), scientifiques et psychotechniques Ces épreuves se font en ligne.
+           - Pour l'entretien oral, le candidat passe un entretien de motivation d'une durée de 15 minutes devant un jury."  
+  utter_admission_schedule-fr:
+  - text: "Pour voir le calendrier d'admission et les dates des tests, veuillez visiter ce lien: [documentation] (https://esprit.tn/admission/esprit-ingenieur)"
+    image: "https://imgur.com/a/kbOWmNz"
+
+  utter_Esprit_courses-fr:
+  - text: "vous pouvez choisir un seul cours en journée ou en soirée.
+          L'université propose quatre types de cursus : Esprit prépa, Esprit Ingénieur, Cours du soir et Executive MBA :
+            ✔ Plus de détails sur Esprit prepa sur [documentation] (https://prepa.esprit.tn/)
+            ✔ Plus de détails sur Esprit Engineer sur [documentation] (https://esprit.tn/formation/esprit-ingenieur/presentation)
+            ✔ Plus de détails sur les cours du soir sur [documentation] (https://esprit.tn/formation/formation-continue/cours-du-soir)
+            ✔ Plus de détails sur l'EMBA sur [documentation] (https://esprit.tn/EMBA)"
+  
+  utter_offered_programs-fr:
+  - text: "Actuellement, deux cours d'ingénierie sont offerts; un cours en journée et un cours en soirée. Nous avons trois domaines d'Ingénierie : Électromécanique, Génie civil et TIC. Les cours détaillés sont disponibles sur : https://esprit.tn/formation/esprit-ingenieur/presentation.
+           Les programmes détaillés et la spécialité sont consultables sur [documentation] (https://esprit.tn/formation/esprit-ingenieur/specialites-et-options)"
+  - text: "Esprit propose quatre types de cursus : Esprit prépa, Esprit Ingénieur, Cours du soir et Executive MBA.
+            ✔ Plus de détails sur Esprit prepa sur [documentation] (https://prepa.esprit.tn/)
+            ✔ Plus de détails sur Esprit Engineer sur [documentation] (https://esprit.tn/formation/esprit-ingenieur/presentation)
+            ✔ Plus de détails sur les cours du soir sur [documentation] (https://esprit.tn/formation/formation-continue/cours-du-soir)
+            ✔ Plus de détails sur l'EMBA sur [documentation] (https://esprit.tn/EMBA)"
+
+  utter_evening-class-fr:
+  - text: "ESPRIT- Cours du soir propose des formations d'ingénieurs aux professionnels, universitaires et demandeurs d'emploi, titulaires d'un baccalauréat ou plus.
+           ESPRIT- Cours du soir propose 4 cursus diplômants :
+
+                ✔ Informatique (avec trois Options de Spécialisation : Business Intelligence, Software Engineering, Cloud Computing)
+                ✔ Télécommunication
+                ✔ Génie civil
+                ✔ Génie électromécanique (avec deux Options de spécialisation : Option OGI (Organisation Et Management Industriel), Option Mécatronique).
+
+
+           ⭐ Durée : Les études durent quatre ans (3 ans si le candidat est titulaire d'un master ou d'un master).
+           ⭐ Timing : Les cours se déroulent sur 10 mois tous les soirs à partir de 18h30. à 20h30 et le samedi à partir de 14h à 18h
+           ⭐ Condition : Les conditions d'admission sont les mêmes que pour le cycle actuel du jour, il s'agit donc d'une admission sur concours : dossier, épreuves et entretien de motivation.
+           ⭐ Frais : Les frais de scolarité sont de 6500 D.T. TTC par an, avec possibilité de financement par la ristourne TFP pour les entreprises."
+
+  utter_3A3B_diff_fr:
+  - text: "⭐ En 3ème année 3A : étudiants titulaires d'une licence dans la spécialité choisie.
+             ⭐ En 3ème année 3B : étudiants titulaires d'un diplôme généraliste en sciences OU technologie / Etudiants déclarés admis sur liste principale ou sur liste complémentaire aux concours nationaux d'accès aux études d'ingénieur (MP, PC, Techno)."
+
+  utter_major_info_fr:
+  - text: "La durée d'études à ESPRIT pour l'obtention du diplôme d'ingénieur est de :
+           - Cinq ans pour les candidats ayant le baccalauréat comme dernier diplôme universitaire
+           - Trois ans pour les candidats admis aux concours nationaux d'entrée aux écoles d'ingénieurs, ou titulaires d'un diplôme de technicien supérieur, ou d'une licence ou de tout autre diplôme scientifique ou technique équivalent.
+           - Deux ans pour les candidats admis en 2e Master ou 2e année d'ingénieur"
+  - text: "Esprit propose quatre types de cursus : Esprit prépa, Esprit Ingénieur, Cours du soir et Executive MBA.
+           -Plus de détails sur Esprit prepa sur https://prepa.esprit.tn/
+           -Plus de détails sur Esprit Engineer sur https://esprit.tn/formation/esprit-ingenieur/presentation
+           -Plus de détails sur les cours du soir sur https://esprit.tn/formation/formation-continue/cours-du-soir
+           -Plus de détails sur l'EMBA sur https://esprit.tn/EMBA"
+  - text: "Chez Esprit, nous avons trois spécialités d'ingénierie:
+           ⭐ Électromécanique
+           ⭐ Génie civil
+           ⭐ TIC
+            Pour des informations détaillées sur les options dans Esprit, visitez https://esprit.tn/formation/esprit-ingenieur/specialites-et-options"
+
+  utter_Specialities-type_fr:
+  - text: "Les spécialités correspondent parfaitement à la diversification croissante des métiers de la société de l'information.
+           Un accent particulier est mis sur les qualités humaines, les compétences managériales, la capacité à travailler dans un contexte multiculturel et la responsabilisation face à la puissance des technologies, dont les diplômés Esprit seront experts.
+           Pour des informations détaillées sur les options dans Esprit, visitez https://esprit.tn/formation/esprit-ingenieur/specialites-et-options :
+           Vous pouvez également regarder cette vidéo intéressante sur le ball des projets:"
+    attachment: { "type":"video", "payload":{ "src": "https://www.youtube.com/watch?v=ZzWlMZRRj4w" } }
+  
+  utter_Specialities-info_fr:        
+  - text: "Spécialités Informatique à Esprit :
+           ⭐ Option Infini (Informatique Financière et Ingénierie)
+           ⭐ Option DS (Science des données)
+           ⭐ Option Génie de l'Architecture Logicielle
+           ⭐ Option ArcTIC (Architecture Informatique et Cloud Computing)
+           ⭐ Option NIDS (Infrastructure Réseau Et Sécurité des Données)
+           ⭐ Option SE (Génie Logiciel)
+           ⭐ Option TWIN (Technologies Web et Internet)
+           ⭐ Option ERP-BI (Enterprise Resource Planning-Business Intelligence)
+           ⭐ Option SIM (Systèmes Informatiques et Mobiles)
+           ⭐Option SLEAM : (Systèmes Et Logiciels Embarqués Ambiants et Mobiles)
+           Pour des informations détaillées sur les options dans Esprit, visitez https://esprit.tn/formation/esprit-ingenieur/specialites-et-options
+           "
+  utter_Specialities-em_fr:
+  - text: "Spécialités Électromécanique à Esprit :
+           ⭐ Option Mécatronique
+           ⭐ Option OGI (Organisation et management industriel)
+           Pour des informations détaillées sur les options dans Esprit, visitez https://esprit.tn/formation/esprit-ingenieur/specialites-et-options
+           "
+
+  utter_Specialities-tc_fr:
+  - text: "Spécialités Télécommunication à Esprit :
+           ⭐ Option WIN (Réseaux Intelligents Sans Fil)
+           ⭐ Option IoSyS (Systèmes et Services Internet des Objets)
+           Pour des informations détaillées sur les options dans Esprit, visitez https://esprit.tn/formation/esprit-ingenieur/specialites-et-options
+           "
+
+  utter_Specialities-gc_fr:
+  - text: "Spécialités Génie Civil en Esprit :
+           ⭐ UE en option: O et G (ingénierie pétrolière et gazière)
+           ⭐ UE Optionnelle : Structures Et Ouvrages
+           Pour des informations détaillées sur les options dans Esprit, visitez https://esprit.tn/formation/esprit-ingenieur/specialites-et-options
+           "
+
+  utter_academic_period-fr:
+  - text: "La période académique commence en août et se termine en juin. L'horaire détaillé sera disponible dans votre boîte de réception après avoir terminé le processus d'inscription"
+
+  utter_fee_structure_tn_nc-fr:
+  - text: "Pour les étudiants tunisiens, la structure des frais était :
+         ✔ Cours normaux:
+            ⭐ Inscrit en 2017/2018 : 6 700 DT
+            ⭐ Inscrit en 2018/2019 : 7 000 DT
+            ⭐ Inscrit en 2019/2020 : 7 350 DT
+            ⭐ Inscrit en 2020/2021 : 7 350 DT
+            ⭐ Inscrit en 2021/2022 : 7 700 DT
+            ⭐ Inscrit en 2022/2023 : 7 900 DT"
+    image: "https://imgur.com/7gNgeMS"
+  
+  utter_fee_structure_tn_ec-fr:
+  - text: "Pour les étudiants tunisiens, la structure des frais était :
+         ✔ Cours du soir :
+            ⭐ Inscrit en 2018/2019 : 5 900 DT
+            ⭐ Inscrit en 2019/2020 : 6 200 DT
+            ⭐ Inscrit en 2020/2021 : 6 200 DT
+            ⭐ Inscrit en 2021/2022 : 6 200 DT
+            ⭐ Inscrit en 2022/2023 : 6 500 DT"
+    image: "https://imgur.com/a/9c8NecN"
+
+  utter_fee_structure_tn_pc-fr:
+  - text: "Pour les étudiants tunisiens, la structure des frais était :
+         ✔ Cycles Préparatoires :
+            ⭐ Inscrit en 2020/2021 : 9 000 DT
+            ⭐ Inscrit en 2021/2022 : 9 000 DT
+            ⭐ Inscrit en 2022/2023 : 9 400 DT"
+    image: "https://imgur.com/a/vrgWcxP"
+
+  utter_fee_structure_int_nc-fr:
+  - text: "Pour la structure des frais d'étudiants internationaux sans foyer était:
+         ✔ Cours normaux :
+            ⭐ Ancien étudiant en Esprit : 3 000 €
+            ⭐ Nouvel Etudiant : 3 000 €"
+    image: "https://imgur.com/a/XEEWUiy"
+
+  utter_fee_structure_int_ec-fr:
+  - text: "Pas de cours du soir à Esprit pour les étudiants internationaux" 
+
+  utter_fee_structure_int_pc-fr:
+  - text: "Pour la structure des frais d'étudiants internationaux sans foyer était:
+         ✔ Cycles Préparatoires :
+            ⭐ Ancien étudiant en Esprit : 3 500 €
+            ⭐ Nouvel Etudiant : 3 500 €"
+    image: "https://imgur.com/a/7IJzSef"
+
+  utter_how-finance_fr:
+  - text: "- Possibilité de financement via le mécanisme d'octroi de prêts régi par la Fondation ESPRIT. [esprit-finance](www.esprit-fondation.tn)
+           - Possibilité de financement par un prêt bancaire accordé en application des termes des conventions conclues avec la Banque Zitouna ou l'UBCI.
+           - Facilité de paiement jusqu'à 36 mensualités.
+            vous trouvez les informations de paiement, le RIB et le BIC ci-dessous :"
+    image: "https://imgur.com/a/Q1JCI7s"
+
+  utter_how-much_tn_nc-fr:
+  - text: "Pour les étudiants tunisiens, la structure des frais pour les classes normales était:"
+    image: "https://imgur.com/7gNgeMS"
+
+  utter_how-much_tn_ec-fr:
+  - text: "Pour les étudiants tunisiens, la structure des frais pour les cours du soir était:"
+    image: "https://imgur.com/a/9c8NecN"
+  
+  utter_how-much_tn_pc-fr:
+  - text: "Pour les étudiants tunisiens, la structure des frais pour les cycles préparatoires était:"
+    image: "https://imgur.com/a/vrgWcxP"
+
+  utter_how-much_int_nc-fr:
+  - text: "Pour les étudiants internationaux, la structure des frais pour les classes normales sans foyer était:"
+    image: "https://imgur.com/a/XEEWUiy"
+
+  utter_how-much_int_ec-fr:
+  - text: "Pas de cours du soir à Esprit pour les étudiants internationaux"
+
+  utter_how-much_int_pc-fr:
+  - text: "Pour les étudiants internationaux, la structure des frais pour les cycles préparatoires sans foyer était:"
+    image: "https://imgur.com/a/7IJzSef"
+
+  utter_self-fr:
+  - text: "Aucun siège autofinancé n'est proposé chez Esprit."
+  
+  utter_hostel_fr:
+  - text: " * préinscriptions en ligne au foyer à partir du 1er juillet 2022 jusqu'à épuisement des places disponibles
+             * Le renouvellement des inscriptions au foyer pour les filles et les élèves de prépa est du 01 juin 2022 au 15 juin 2022.
+           Des informations détaillées sur l'inscription en auberge et en restaurant sont disponibles sur : [documentation] (https://esprit.tn/vie-etudiante/rentree-scolaire/logement-restauration)"
+            
+  utter_hostel_fees-tn-fr:
+  - text: "Les frais annuels d'hébergement au foyer ESPRIT pour l'année académique 2022/2023 s'élèvent à :
+  
+            Commodités                                      Montant TTC
+
+            Chambre double                                  2 500 DT
+            Appartement pour 4 personnes : S+1              2 600 DT
+            Appartement pour 6 personnes : S+2              2 600 DT
+            "
+    image: "https://imgur.com/a/sls9xxr"
+
+  utter_hostel_fees-int-fr:
+  - text: "Les frais annuels d'hébergement à l'auberge ESPRIT pour l'année académique 2022/2023 s'élèvent à:
+
+            Commodités                                      Montant TTC
+
+            Chambre double                                  900 €
+            Chambre Triple                                  800 €
+            "
+    image: "https://imgur.com/a/q8zipM7"
+
+  utter_hostel_location-fr:
+  - text: "Esprit a deux résidences :
+           🏙 ESPRIT Internal Residence
+           🏙 Al Amen Residence 
+           "
+
+  utter_Alamen_pic-fr:
+  - text: "Voici les photos de Al Amen Residence:"
+
+  utter_EspritInternal_pic-fr:
+  - text: "Voici les photos de ESPRIT Internal Residence:"
+ 
+  utter_restaurant-fr:
+  - text: "Le restaurant est accessible à tous les étudiants résidents et non-résidents au foyer.
+            Voici les photos du restaurant Esprit :"
+
+  utter_restaurant-tn-fr:
+  - text: "La liste de prix pour étudiant tunisien était :"
+  
+  utter_restaurant-int-fr:
+  - text: "La liste de prix pour les étudiants internationaux était :"
+
+  utter_mobility_fr:
+  - text: "L'aspect international peut intervenir dans le cursus même des étudiants d'Esprit peuvent accéder à la mobilité et à l'expérience internationale :
+           -Par un semestre d'études dans l'une des universités partenaires et un stage, qui remplace la 5ème année à Esprit, l'étudiant obtient alors le diplôme d'ingénieur Esprit.
+           -Pendant 2 années pleines : l'étudiant obtient conjointement deux diplômes : le diplôme Esprit et le Master de l'établissement étranger partenaire.
+           Des informations détaillées sont disponibles sur : [documentation] (https://esprit.tn/international/experience)"
+
+  utter_internatinal-degree_fr:
+  - text: "Le programme de diplôme international est un programme qui se déroulera entièrement et exclusivement en anglais. Il dispense un enseignement en anglais dans un environnement anglophone, c'est-à-dire en adoptant un programme d'études en anglais.
+           Pour le programme de diplôme international, visitez ce lien: https://esprit.tn/InternationalDegreeProgram"
+  - text: "Le programme de diplôme international vise à former des ingénieurs TIC bilingues pour une carrière internationale prometteuse.
+           Il facilite également l'intégration des étudiants anglophones dans le système éducatif d'Esprit ainsi que leur éventuelle réintégration académique et professionnelle dans leur pays d'origine.
+           Le Programme Diplôme International accueillera des étudiants tunisiens et internationaux dans la même classe, leur offrant la possibilité de suivre une formation scientifique et technique (cours, TD, travaux pratiques et projets...) exclusivement en anglais, dans le respect des approches pédagogiques d'Esprit."
+
+  utter_Warning-fr:
+  - text: "Le système ECTS est un système de transfert et d'accumulation de crédits centré sur l'étudiant.
+           Il est basé sur la transparence des résultats et du processus d'apprentissage.
+           Il vise à faciliter la planification, la délivrance, l'évaluation, la reconnaissance et la validation des qualifications et des unités d'enseignement.
+           Dans le système ECTS, la formulation des acquis d'apprentissage constitue la base de l'évaluation de la charge de travail, et donc de l'adéquation des crédits.
+           Les crédits ECTS sont attribués à des programmes d'études et à leurs différentes composantes des enseignements pédagogiques désignés par les unités d'enseignement (par exemple cours, mémoires, stages, travaux en laboratoire, etc.)."
+  - text: "60 crédits ECTS correspondent à la charge de travail d'une année à temps plein dans le cadre d'un programme pédagogique.
+           Dans la plupart des cas, la charge de travail des étudiants est de 1500 à 1800 heures pour une année académique, soit entre 50 et 60 heures par semaine, la valeur d'un crédit représentant 25 à 30 heures de travail.
+           Chaque UE se voit attribuer un nombre de crédits ECTS qui correspond également au coefficient utilisé pour calculer la moyenne générale."
+
+  utter_email-complaint_fr:
+  - text: "Pour toute information ou problème d'admission contacter : reclamation.admission2223@esprit.tn"
+  
+  utter_interview-reschedule_fr:
+  - text: "Pour toute information ou réclamation concernant un entretien, contactez : reclamation.admission2223@esprit.tn"
+  
+  
+  utter_social_events-fr:
+  - text: "Le Service de la Vie Etudiante : Le rôle du service est d'accompagner les étudiants dans leurs projets, de promouvoir leurs engagements au sein de l'école et de faciliter leur quotidien."
+  - text: "Clubs ESPRIT : Au sein d'Esprit, les associations et les clubs remplissent plusieurs rôles compte tenu de la diversité des motivations qui animent ceux qui sont à leur origine. Conscients de l'importance de la vie communautaire, les élèves jouent un rôle important dans l'élaboration et la transmission des messages aux destinataires."
+  - text: "Cellule d'écoute : La cellule d'écoute et d'accompagnement est un espace confidentiel qui a pour but d'accueillir, d'écouter, de comprendre, d'informer et d'orienter les étudiants ESPRIT."
+  utter_job-fr:
+  - text: "Le taux d'emploi d'Esprit est proche de 100%"
+
+  utter_library-fr:
+  - text: "Une bibliothèque est disponible dans chaque campus. La bibliothèque est un service d'information et de documentation à la disposition des étudiants, des enseignants, des chercheurs, du personnel administratif et technique, ainsi que d'une personne autorisée par la direction de l'université."
+
+  utter_cafeteria-fr:
+  - text: "Une cafétéria est disponible dans chaque campus"
+
+  utter_director_office-fr:
+  - text: "Le bureau du directeur est situé au site du Bloc E Principal (El-Ghazela)"
+
+  utter_students_affair-fr:
+  - text: "Le service des affaires étudiantes est situé au Bloc A Cité Principale (El-Ghazela)"
+
+  utter_academic_office-fr:
+  - text: "Pour toute question contacter Mr Mourad ZERAI Email : mourad.zerai@esprit.tn
+           chaque formation académique admet un responsable, vous pouvez trouver la liste complète dans ce lien : https://esprit.tn/esprit/gouvernance/services-esprit"
+
+
+
+config:
+  store_entities_as_slots: true
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,85 @@
+# The config recipe.
+# https://rasa.com/docs/rasa/model-configuration/
+recipe: default.v1
+
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+
+pipeline:
+    - name: WhitespaceTokenizer
+    - name: RegexFeaturizer
+    - name: LexicalSyntacticFeaturizer
+      features: [ [low, title, upper, suffix2], # features for the word preceding the word being evaluated
+      [EOS, title, suffix5], # features for the word being evaluated
+      [prefix2] ] 
+    - name: CountVectorsFeaturizer
+    - name: CountVectorsFeaturizer
+      analyzer: char_wb
+      min_ngram: 1
+      max_ngram: 4
+    - name: RegexFeaturizer
+    - name: CRFEntityExtractor
+      BILOU_flag: True
+      features: [ [low, title, upper],
+      [bias, low, prefix5, prefix2, suffix5, suffix3, suffix2, upper, title, digit, pattern], 
+      [low, title, upper] ]
+      max_iterations: 200
+      L1_c: 0.1
+      L2_c: 0.2
+      featurizers: []
+      min_ngram: 1
+      max_ngram: 4
+    - name: DIETClassifier
+      batch_strategy: sequence
+      epochs: 400
+      transformers_layers: 4
+      constrain_similarities: true
+    - name: EntitySynonymMapper
+    - name: LanguageModelFeaturizer
+      model_name: "bert"
+      model_weights: "rasa/LaBSE"
+      cache_dir: null
+    - name: ResponseSelector
+      retrieval_intent: out_of_scope
+      scale_loss: false
+      epochs: 100
+    - name: ResponseSelector
+      retrieval_intent: faq
+      scale_loss: false
+      epochs: 100
+    - name: ResponseSelector
+      retrieval_intent: faq_fr
+      scale_loss: false
+      epochs: 100
+    - name: ResponseSelector
+      epochs: 200
+      constrain_similarities: true
+      model_confidance: softmax
+    - name: FallbackClassifier
+      threshold: 0.3
+      ambiguity_threshold: 0.1
+
+    
+# Configuration for Rasa Core.
+# https://rasa.com/docs/rasa/core/policies/
+policies:
+# # No configuration for policies was provided. The following default policies were used to train your model.
+# # If you'd like to customize them, uncomment and adjust the policies.
+# # See https://rasa.com/docs/rasa/policies for more information.
+    - name: MemoizationPolicy
+      max_history: 5
+      epochs: 200
+    - name: TEDPolicy
+      max_history: 5
+      epochs: 250
+      batch_size:
+        - 32
+        - 64
+      constrain_similarities: true
+    - name: RulePolicy
+      max_history: 5
+      epochs: 200
+      batch_size:
+        - 32
+        - 64
