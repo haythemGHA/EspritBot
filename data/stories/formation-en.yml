@@ -1,0 +1,673 @@
+version: "3.1"
+
+stories:
+
+- story: Esprit courses affirm with mailing en
+  steps:
+    - intent: Esprit-courses-en
+    - action: utter_Esprit_courses-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_scolarite_esprit
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: Esprit courses affirm without mailing en
+  steps:
+    - intent: Esprit-courses-en
+    - action: utter_Esprit_courses-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: Esprit courses deny with mailing en
+  steps:
+    - intent: Esprit-courses-en
+    - action: utter_Esprit_courses-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_scolarite_esprit
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: Esprit courses deny without mailing en
+  steps:
+    - intent: Esprit-courses-en
+    - action: utter_Esprit_courses-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: offered programs yes with mailing en
+  steps:
+    - intent: offered-programs-en
+    - action: utter_offered_programs-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_scolarite_esprit
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: offered programs yes without mailing en
+  steps:
+    - intent: offered-programs-en
+    - action: utter_offered_programs-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: offered programs no with mailing en
+  steps:
+    - intent: offered-programs-en
+    - action: utter_offered_programs-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_scolarite_esprit
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: offered programs no without mailing en
+  steps:
+    - intent: offered-programs-en
+    - action: utter_offered_programs-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: 3A3B diff-en yes
+  steps:
+    - intent: 3A3B-diff-en
+    - action: utter_3A3B_diff_en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: 3A3B diff-en no
+  steps:
+    - intent: 3A3B-diff-en
+    - action: utter_3A3B_diff_en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: academic_period affirm en
+  steps:
+    - intent: academic_period-en
+    - action: utter_academic_period-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: academic_period deny en
+  steps:
+    - intent: academic_period-en
+    - action: utter_academic_period-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+
+- story: major_info-en yes
+  steps:
+    - intent: major-info-en
+    - action: utter_major_info_en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+
+- story: major_info-en no
+  steps:
+    - intent: major-info-en
+    - action: utter_major_info_en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+- story: evening-class-en yes
+  steps:
+    - intent: evening-class-en
+    - action: utter_evening-class-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: evening-class-en no
+  steps:
+    - intent: evening-class-en
+    - action: utter_evening-class-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+
+- story: Specialities-inf-en yes without mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Informatique"
+    - slot_was_set:
+      - specialite: "Informatique"
+    - action: utter_Specialities-info_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: Specialities-inf-en yes with mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Informatique"
+    - slot_was_set:
+      - specialite: "Informatique"
+    - action: utter_Specialities-info_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_tic_pdf
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+
+- story: Specialities-inf-en no without mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Informatique"
+    - slot_was_set:
+      - specialite: "Informatique"
+    - action: utter_Specialities-info_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: Specialities-inf-en no with mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Informatique"
+    - slot_was_set:
+      - specialite: "Informatique"
+    - action: utter_Specialities-info_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_tic_pdf
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+
+- story: Specialities-em-en yes without mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Electromecanique"
+    - slot_was_set:
+      - specialite: "Electromecanique"
+    - action: utter_Specialities-em_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: Specialities-em-en yes with mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Electromecanique"
+    - slot_was_set:
+      - specialite: "Electromecanique"
+    - action: utter_Specialities-em_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_electromecanique_pdf
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+
+- story: Specialities-em-en no without mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Electromecanique"
+    - slot_was_set:
+      - specialite: "Electromecanique"
+    - action: utter_Specialities-em_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: Specialities-em-en no with mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Electromecanique"
+    - slot_was_set:
+      - specialite: "Electromecanique"
+    - action: utter_Specialities-em_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_electromecanique_pdf
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: Specialities-tc-en yes without mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Telecommunication"
+    - slot_was_set:
+      - specialite: "Telecommunication"
+    - action: utter_Specialities-tc_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: Specialities-tc-en yes with mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Telecommunication"
+    - slot_was_set:
+      - specialite: "Telecommunication"
+    - action: utter_Specialities-tc_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_tic_pdf
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+
+- story: Specialities-tc-en no without mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Telecommunication"
+    - slot_was_set:
+      - specialite: "Telecommunication"
+    - action: utter_Specialities-tc_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: Specialities-tc-en no with mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Telecommunication"
+    - slot_was_set:
+      - specialite: "Telecommunication"
+    - action: utter_Specialities-tc_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_tic_pdf
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+
+- story: Specialities-gc-en yes without mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Génie civil"
+    - slot_was_set:
+      - specialite: "Génie civil"
+    - action: utter_Specialities-gc_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: Specialities-gc-en yes with mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Génie civil"
+    - slot_was_set:
+      - specialite: "Génie civil"
+    - action: utter_Specialities-gc_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_geniecivil_pdf
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+
+- story: Specialities-gc-en no without mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Génie civil"
+    - slot_was_set:
+      - specialite: "Génie civil"
+    - action: utter_Specialities-gc_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: Specialities-gc-en no with mailing
+  steps:
+    - intent: Specialities-type-en
+    - action: utter_Specialities-type_en
+    - action: action_specialite
+    - intent: specialite
+      entities: 
+      - specialite: "Génie civil"
+    - slot_was_set:
+      - specialite: "Génie civil"
+    - action: utter_Specialities-gc_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_geniecivil_pdf
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+

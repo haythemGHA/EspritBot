@@ -1,0 +1,177 @@
+[
+  {
+    "text": "Yes",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "Yes",
+        "entity": "track_status"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "NO",
+    "entities": [
+      {
+        "start": 0,
+        "end": 2,
+        "value": "NO",
+        "entity": "track_status"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "tn",
+    "entities": [
+      {
+        "start": 0,
+        "end": 2,
+        "value": "tn",
+        "entity": "nationalite"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nationalite",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.9784464836120605,
+        "value": "tn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "👍",
+    "entities": [
+      {
+        "start": 0,
+        "end": 1,
+        "value": "👍",
+        "entity": "feedback_value"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "feedback_value",
+        "start": 0,
+        "end": 1,
+        "confidence_entity": 0.9438422918319702,
+        "value": "👍",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "👎",
+    "entities": [
+      {
+        "start": 0,
+        "end": 1,
+        "value": "👎",
+        "entity": "feedback_value"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "feedback_value",
+        "start": 0,
+        "end": 1,
+        "confidence_entity": 0.9430328011512756,
+        "value": "👎",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Oui",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "Oui",
+        "entity": "track_status-fr"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Non",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "Non",
+        "entity": "track_status-fr"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "e-mail = Patti.Salazar@gmail.com",
+    "entities": [
+      {
+        "start": 9,
+        "end": 32,
+        "value": "Patti.Salazar@gmail.com",
+        "entity": "(email"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "email",
+        "start": 9,
+        "end": 32,
+        "confidence_entity": 0.5068059304770919,
+        "value": "Patti.Salazar@gmail.com",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "(email",
+        "start": 9,
+        "end": 32,
+        "confidence_entity": 0.9779702425003052,
+        "value": "Patti.Salazar@gmail.com",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Mais vous êtes un site anglais :(",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "language",
+        "start": 23,
+        "end": 30,
+        "confidence_entity": 0.5530889639953842,
+        "value": "anglais",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Kristin, je veux t'épouser",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Kristin",
+        "entity": "nom"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nom",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.8300551772117615,
+        "value": "Kristin",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

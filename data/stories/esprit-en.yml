@@ -1,0 +1,281 @@
+version: "3.1"
+
+stories:
+
+- story: esprit-en affirm
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: Esprit-en
+    - action: utter_Esprit-en
+    - action: action_Esprit_link
+    - action: utter_ask_more
+    - intent: affirm-en
+    - action: utter_contact_en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: esprit-en deny
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: Esprit-en
+    - action: utter_Esprit-en
+    - action: action_Esprit_link
+    - action: utter_ask_more
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+    - action: utter_possibilities-en
+    - intent: deny-en
+    - action: utter_goodbye_en
+
+- story: ask contact-en yes
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: contact-en
+    - action: utter_contact_en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: ask contact-en no
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: contact-en
+    - action: utter_contact_en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_goodbye_en
+
+- story: Esprit address affirm en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: Esprit-address-en
+    - action: utter_Esprit_adress-en
+    - action: action_Esprit_link
+    - action: action_location_map
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: Esprit address deny en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: Esprit-address-en
+    - action: utter_Esprit_adress-en
+    - action: action_Esprit_link
+    - action: action_location_map
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: social event affirm en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: social_events-en
+    - action: utter_social_events-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: social event deny en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: social_events-en
+    - action: utter_social_events-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: library affirm en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: library-en
+    - action: utter_library-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: library deny en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: library-en
+    - action: utter_library-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: cafeteria affirm en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: cafeteria-en
+    - action: utter_cafeteria-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: cafeteria deny en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: cafeteria-en
+    - action: utter_cafeteria-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: academic_office affirm en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: academic_office-en
+    - action: utter_academic_office-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: academic_office deny en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: academic_office-en
+    - action: utter_academic_office-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: director_office affirm en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: director_office-en
+    - action: utter_director_office-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: director_office deny en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: director_office-en
+    - action: utter_director_office-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: students_affair affirm en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: students_affair-en
+    - action: utter_students_affair-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: students_affair deny en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: students_affair-en
+    - action: utter_students_affair-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: job_rate affirm en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: job_rate-en
+    - action: utter_job-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: job_rate deny en
+  steps:
+    - intent: greet-en
+    - action: action_greet_user
+    - intent: job_rate-en
+    - action: utter_job-en
+    - action: action_Esprit_link
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else

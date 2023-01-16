@@ -1,0 +1,637 @@
+version: "3.1"
+
+nlu:
+##Francais
+
+- intent: affirm-fr
+  examples: |
+    - Accepter
+    - Impressionnant!
+    - Bien
+    - Super
+    - J'accepte
+    - J'accepte.
+    - Je suis d'accord
+    - je l'utilise
+    - J'ai changé d'avis. je veux l'accepter
+    - Je le fais
+    - Je comprends
+    - Je suppose
+    - Je l'ai utilisé dans le passé
+    - Je vais
+    - J'adorerais ça
+    - Je suis sûr que je le ferai!
+    - Je l'utilise
+    - Agréable
+    - D'ACCORD
+    - Bien sûr
+    - Oh oui
+    - Oh d'accord
+    - D'accord
+    - OK commençons
+    - D'accord.
+    - D'accord
+    - D'accord!
+    - S'IL VOUS PLAÎT
+    - BIEN SUR
+    - Bien sûr
+    - Sucré
+    - Ce serait génial
+    - OUI
+    - OUAIS
+    - Ouais
+    - Ouais
+    - Oui bien sûr
+    - Ouais
+    - Ouais c'est bien
+    - Ouais!
+    - Ouaip
+    - Oui
+    - Oui
+    - Oui s'il te plaît
+    - Oui s'il te plaît!
+    - Oui j'accepte
+    - Oui.
+    - Ouais
+    - un peu
+    - Tout à fait
+    - J'accepte
+    - accepté
+    - convenu
+    - bien
+    - très bien
+    - incroyable
+    - étonnante!
+    - impressionnant
+    - impressionnant!
+    - confirmer
+    - pas mal ton histoire mec
+    - certainement oui sans aucun doute
+    - Fini
+    - assez juste
+    - bien sûr
+    - bien
+    - putain ouais !
+    - aller
+    - poursuivre
+    - Allez-y
+    - va super bien
+    - bien.
+    - génial
+    - super permet de faire ça
+    - génial!
+    - putain ouais
+    - putain, oui
+    - hum, j'aimerais ça
+    - comme c'est gentil!
+    - Je suis d'accord
+    - Je suis!
+    - Je veux cela
+    - je vais!
+    - c'est bon
+    - c'est cool
+    - c'est super
+    - faisons-le
+    - faisons cela
+    - bien sûr
+    - bien sûr que je le fais
+    - bien sûr
+    - ah génial !
+    - Oh cool
+    - Oh super !!
+    - ah super
+    - d'accord
+    - OK bien
+    - Ok mon ami
+    - OK bien
+    - D'accord, super
+    - Ok, j'accepte
+    - ok 
+    - ok, je me comporte maintenant
+    - Ok j'ai compris
+    - d'accord Sara
+    - d'accord...
+    - d'accord
+    - bien sûr
+    - d'accord..
+    - d'accord
+    - oui
+    - parfait
+    - s'il vous plaît
+    - sorte de
+    - Bien sur
+    - chose sûre
+    - Bien sur!
+    - c'est cool
+    - ça va
+    - ça semble bien
+    - c'est génial
+    - C'est très bien
+    - c'est bon
+    - c'est génial
+    - Haut
+    - euh-hein
+    - beaucoup
+    - Hé bien oui
+    - toi
+    - tu es cool
+    - vas-y
+    - je veux
+    - s'il vous plait
+    - c'est cool
+    - ouais
+    - Oui
+    - Yay
+    - Oui s'il vous plaît
+    - oui fais ça
+    - Oui bien sûr
+    - ouais'=
+    - Ouais pourquoi pas
+    - oueeeeezzzzz
+    - oui je veux ça
+    - oui si je dois
+    - oui s'il te plait
+    - oui c'est sympa
+    - oui c'est cool
+    - oui, ça ira merci
+    - ouais. :/
+    - oui ...
+    - oui accepter s'il vous plait
+    - oui bébé
+    - Oui cool
+    - oui donne moi des informations
+    - Oui, vas y
+    - oui vas-y
+    - Oui Super
+    - Oui j'accepte
+    - Oui je suis d'accord
+    - oui j'ai déjà construit un bot
+    - Oui j'ai!
+    - oui c'est le cas
+    - oui c'était bien
+    - oui bien sûr
+    - oui s'il vous plait
+    - Oui s'il vous plaît
+    - Oui s'il vous plaît!
+    - oui svp
+    - oui monsieur
+    - Oui c'est super
+    - oui c'est ce que je veux
+    - Oui, vous pouvez
+    - oui'
+    - Oui, j'aimerais
+    - Oui cool
+    - oui, donnez-moi des informations, s'il vous plaît
+    - Oui
+    - oui.
+    - ouiiii
+    - ouisss
+    - oui oui oui
+    - tu m'as posé une question oui ou non, à laquelle j'ai répondu oui
+    - tu m'as eu, j'accepte, si tu veux que je le fasse
+    - ouiiiiii
+    - D'accord cool
+    - d'accord..
+    - considérant
+    - Plus ou moins
+    - ça a l'air bien!
+    - vraiment
+
+- intent: react_positive-fr
+  examples: |
+    - Cool
+    - cool
+    - cool :)
+    - cool!
+    - :)
+    - :D
+    - HAHA
+    - Je suis content
+    - MDR
+    - Mdr
+    - Lol c'est marrant
+    - À l'air cool
+    - WOW
+    - Ouah
+    - Vous êtes formidable
+    - Tu es mignon.
+    - Tu es gentil.
+    - T'es vraiment cool
+    - hahaha
+    - hahaha
+    - heureux
+    - je me sens heureux
+    - Je suis content
+    - je suis heureux aujourd'hui
+    - je suis très content de votre réponse
+    - je t'aime
+    - C'est vraiment cool
+    - mdr
+    - je t'aime
+    - ok Espritbot, t'es cool
+    - Esprit est génial
+    - une super démo
+    - c'est drole
+    - c'était une super interaction
+    - Ca c'est drôle
+    - aujourd'hui était une belle journée
+    - wow
+    - vous êtes un robot badass!
+    - Tu es incroyable
+    - t'es cool
+    - tu es cool mec
+    - tu te débrouilles bien
+    - vous êtes drôle
+    - vous êtes formidable
+    - Tu es mon nouveau meilleur ami
+    - tu as l'air sympa :D
+    - Je vous aime bien
+    - Je vous aime
+    - tu es vraiment intelligent
+    - J'aime EspritBot
+    - héhé
+    - comme toi
+    - tu es tellement intelligent
+    - C'est génial.
+    - tu vas bien
+    - Excellentes informations
+    - Je veux dire que j'ai aimé l'explication
+    - Super! J'aime EspritBot
+
+- intent: goodbye-fr
+  examples: |
+    - au revoir
+    - à plus tard
+    - à plus
+    - euh au revoir
+    - Au revoir
+    - au revoir :P
+    - au revoir robot
+    - au revoir c'était sympa de te parler
+    - au revoir!
+    - adieu
+    - au revoir
+    - au revoir robot Esprit !
+    - Bonsoir
+    - je te laisse
+    - OK au revoir
+    - à plus tard
+    - à plus
+    - à plus tard
+    - à plus tard . au revoir
+    - prenez soin de vous
+    - alors Salut
+    - à plus tard
+
+
+- intent: canthelp-fr
+  examples: |
+    - Je pense que tu ne peux pas m'aider
+    - et c'est tout?
+    - et tu t'appelles bot ? pff
+    - Avez-vous quelque chose?
+    - sortir
+    - sortez maintenant
+    - Hé, tu as promis de me contacter, mais personne ne l'a fait, j'ai vraiment besoin de finir ce bot d'assurance auto !!!!
+    - hm je ne pense pas que tu puisses faire ce que je veux
+    - je suppose que tu ne peux pas m'aider alors
+    - rien d'autre?
+    - ok je suppose que tu ne peux pas m'aider
+    - ok alors tu ne peux pas m'aider
+    - ok, mais ça ne m'aide pas
+    - arrêt
+    - arrêter de revenir en arrière
+    - arrêter cette conversation
+    - c'était de la merde, tu n'aides pas
+    - ce n'est pas ce que je veux
+    - cette conversation n'est pas vraiment utile
+    - cela ne mène à rien
+    - tu ne peux pas m'aider
+    - tu ne peux pas m'aider avec ce dont j'ai besoin
+    - tu ne peux pas m'aider avec ce que je veux
+    - tu ne peux pas m'aider
+    - quitter
+    - ça n'aide pas
+
+- intent: deny-fr
+  examples: |
+    - je ne veux pas
+    - Je ne veux pas te le donner
+    - je ne veux pas dire
+    - Je ne te donne pas mon adresse mail
+    - je ne vais pas te le donner
+    - NON
+    - NON, NE VEUX PAS ÇA!
+    - Jamais
+    - Pas grave
+    - Non
+    - Non, merci
+    - Non, pas vraiment.
+    - Non.
+    - Pas vraiment
+    - absolument pas
+    - déclin
+    - définitivement pas
+    - je refuse
+    - je n'aime pas ça
+    - je ne pense pas
+    - je ne veux ni l'un ni l'autre
+    - je ne veux pas
+    - je ne veux pas te donner mon email
+    - je ne veux pas accepter :P lol
+    - je suppose que cela signifie non
+    - J'ai bien peur que non
+    - je ne suis pas sûr
+    - ça va plutôt mal
+    - c'est chiant
+    - c'est sux
+    - non
+    - non, ça va
+    - non pas pour moi
+    - non, première fois
+    - non, ça va
+    - jamais
+    - peu importe
+    - non
+    - non :(
+    - non je ne veux pas
+    - non je n'ai pas encore décidé si je veux m'inscrire
+    - non et encore non
+    - pas de robots du tout
+    - Ne pas aller
+    - non je ne peux pas
+    - non je n'accepte pas
+    - non je ne veux pas
+    - non je ne veux pas accepter :P lol
+    - non je ne le ferai pas
+    - non madame
+    - non monsieur
+    - non désolé
+    - Non merci
+    - non, merci
+    - certainement pas
+    - non tu l'as mal fait
+    - non!!!!
+    - non, je hais ça
+    - non, ma première fois
+    - non, merci
+    - non, merci
+    - non. tu es idiot
+    - non
+    - noooooooooon
+    - nooooooooooooooooooooooooooooooonnnnn
+    - non
+    - Nan
+    - Nan!
+    - Nan. je vais bien
+    - ne va pas bien du tout
+    - pas vraiment
+    - pas tout de suite
+    - pas encore
+    - désolé pas maintenant
+    - je ne veux toujours pas dire
+    - Merci mais, non merci
+    - ça craint
+    - très mauvais
+    - Je n'ai pas besoin d'aide pour l'installation
+    - Je ne veux pas dire le nom de mon entreprise
+    - pas d'arrêt
+    - arrête ça, je m'en fous !!!
+    - aucun d'entre eux
+    - je ne suis pas d'accord
+
+- intent: explain-fr
+  examples: |
+    - peux-tu élaborer
+    - pourriez-vous expliquer pourquoi vous en avez besoin
+    - pourriez-vous m'en dire plus
+    - Explique le moi
+    - explique cela
+    - je veux plus d'informations
+    - j'aimerais savoir pourquoi vous en avez besoin
+    - veuillez préciser
+    - S'il vous plaît, expliquez
+    - pourquoi avez-vous besoin de savoir que
+    - pourquoi est-ce nécessaire
+    - donne moi plus de détails
+    - que veux-tu dire
+    - qu'est-ce que cela signifie
+    - comment venir?
+
+- intent: greet-fr
+  examples: |
+    - bonjour
+    - salut
+    - Bonjour
+    - bonsoir
+    - salutations
+    - Salut
+    - Salut!
+    - Salut'
+    - Salut,
+    - Salut, robot
+    - Ce qui se passe?
+    - Quoi de neuf
+    - Quoi de neuf mon bot
+    - Quoi de neuf?
+    - ouais quoi de neuf
+    - hey patron
+    - J'ai dit, salut !!
+    - Salut tout le monde ;)
+    - bonne après-midi
+    - Esprit bot salut
+    - salut Esprit bot
+
+
+- intent: react_negative-fr
+  examples: |
+    - Je ne me sens pas bien
+    - Je suis triste
+    - je suis hyper triste
+    - Maintenant je suis triste
+    - C'est mauvais
+    - Tu es assez mauvais
+    - mal
+    - mauvais garçon
+    - blague de merde
+    - Esprit est très mauvais
+    - je suis en colère contre toi
+    - je me sens triste
+    - j'en suis triste
+    - Je suis très triste
+    - L'esprit est mauvais
+    - triste
+    - oui triste
+    - oui triste :(
+    - hyper triste
+    - Tu m'as brisé le coeur
+    - très très triste
+    - tu es méchant
+    - tu es un mauvais robot
+    - tu me rends triste
+    - Tu es fou
+    - Tu es grossier
+    - les robots sont mauvais
+    - je m'en fiche!!!!
+    - je n'aime pas les robots
+    - c'est une expérience vraiment frustrante
+    - tu es plutôt terne
+    - je suis tellement inquiet
+    - je vais partir
+    - Même si je comprends que tu sois encore en développement, je me sens un peu déçu.
+    - Tu n'es sûrement pas aussi intelligent que je le pensais
+    - je ne me sens pas bien
+    - pas bon
+    - C'est tellement grossier
+    - malheureusement
+    - Cet outil ici n'est pas bon
+    - ennuyeux
+    - ennuyeuse
+
+- intent: thank-fr
+  examples: |
+    - Cool. Merci
+    - Grand merci
+    - Merci
+    - Merci robot
+    - Merci beaucoup
+    - Merci!
+    - Merci pour ça
+    - incroyable, merci
+    - à votre santé
+    - bravo frère
+    - cool merci
+    - grand merci
+    - OK merci
+    - ok merci robot
+    - OK merci!
+    - parfait, merci
+    - Merci
+    - je vous remercie de toute façon
+    - merci beaucoup pour tout
+    - merci beaucoup
+    - Merci pour l'aide
+    - merci c'est une super nouvelle
+    - Oui merci
+    - Merci pour ton information
+
+- intent: bot_challenge-fr
+  examples: |
+    - Etes-vous un robot?
+    - Êtes-vous un être humain?
+    - est-ce que je parle à un bot?
+    - Qu'es-tu
+    - qui es-tu
+    - n'êtes-vous pas un bot
+    - Etes-vous un robot?
+    - Etes-vous un robot
+    - êtes-vous un chatbot
+    - êtes-vous un Espritbot?
+    - êtes-vous un vrai bot?
+    - Etes-vous un robot
+    - es-tu ai
+    - es-tu artificielle
+    - êtes-vous une intelligence artificielle
+    - êtes-vous Bot
+    - êtes-vous Bot?
+    - Es-tu réel
+    - tu es vrai lol
+    - es-tu vraiment un bot
+    - es-tu un robot
+    - es-tu sûr d'être un bot ?
+    - robot?
+    - parce que tu es un bot
+    - je suppose que vous êtes un chatbot
+    - oh êtes-vous chatbot?
+    - dis-moi, es-tu un bot?
+    - qu'est-ce que tu es, un bot?
+    - tu es un robot
+    - vous êtes chatbot
+    - tu es un bot
+    - vous robot
+    - Vrai bot alors ?
+    - es-tu vraiment un bot ?
+- intent: mood_great-fr
+  examples: |
+    - parfait
+    - génial
+    - étonnante
+    - se sentir comme un roi
+    - magnifique
+    - je me sens très bien
+    - Je suis génial
+    - Je vais sauver le monde
+    - super content
+    - extrêmement bon
+    - tellement parfait
+    - tellement parfait
+
+- intent: mood_unhappy-fr
+  examples: |
+    - ma journée a été horrible
+    - Je suis triste
+    - je ne me sens pas très bien
+    - je suis déçu
+    - hyper triste
+    - Je suis tellement triste
+    - malheureux
+    - pas bon
+    - pas très bien
+    - extrêmement triste
+
+- intent: help-fr
+  examples: |
+    - J'ai besoin d'aide
+    - en quoi pouvez-vous m'aider
+    - Pouvez-vous m'aider
+    - Que pouvez-vous faire
+    - Je ai besoin d'aide
+    - aide-moi
+    - Pouvez-vous m'aider s'il vous plaît
+    - problème
+    - gros problème
+    - Comment pouvez vous m'aider
+    - Comment tu m'aides ?
+    - Je ai besoin d'aide
+    - Quelles sont mes options
+    - Qu'est-ce que tu sais faire ?
+    - Que puis-je te demander ?
+    - Que puis-je faire?
+    - Que pouvez-vous démontrer
+    - Que peux tu faire pour moi?
+    - Que pouvez-vous faire?
+    - Que pouvez-vous me dire?
+    - Que faites-vous
+    - n'importe quoi d'autre
+    - Il y a-t-il des alternatives?
+    - Puis-je vous demander autre chose ?
+    - pouvez-vous faire autre chose?
+    - Pouvez-vous m'aider?
+    - revenir
+    - cool! puis-je faire autre chose ici?
+    - bonjour que pouvez-vous faire pour moi
+    - aider
+    - aide-moi
+    - Aidez-moi, s'il vous plaît
+    - aide svp
+    - aider?
+    - aide moi
+
+- intent: restart-fr
+  examples: |
+    - oui tu peux redémarrer
+    - Veuillez redémarrer ce chat/
+    - ok redémarrez s'il vous plait
+    - veuillez redémarrer le bot
+    - redémarrer cette conversation
+    - je veux redémarrer
+    - pourquoi ne pas redémarrer ????
+    - hé, j'ai dit redémarrer
+    - redémarrer la session svp
+    - redémarrer 
+
+- intent: track_mailing-fr
+  examples: |
+    - [Oui](track_status-fr) 
+    - [Non](track_status-fr) 
+

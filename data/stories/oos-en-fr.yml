@@ -1,0 +1,62 @@
+version: "3.1"
+
+stories:
+- story: out of scope other
+  steps:
+  - intent: out_of_scope_other
+  - action: utter_out_of_scope_other
+  - action: utter_possibilities-en
+
+- story: say enter data outside the flows
+  steps:
+  - intent: greet-en
+  - action: action_greet_user
+  - intent: enter_data
+  - action: utter_not_sure-en
+  - action: utter_possibilities-en
+
+- story: say confirm outside the flows 2
+  steps:
+  - intent: greet-en
+  - action: action_greet_user
+  - intent: affirm-en
+  - action: utter_thumbsup
+
+- story: say greet outside the flows
+  steps:
+  - intent: greet-en
+  - action: action_greet_user
+  - or:
+    - intent: greet-en
+    - intent: enter_data
+      entities:
+      - name: akela
+  - action: action_greet_user
+
+###francais
+
+- story: say enter data outside the flows fr
+  steps:
+  - intent: greet-fr
+  - action: action_greet_user-fr
+  - intent: enter_data-fr
+  - action: utter_not_sure-fr
+  - action: utter_possibilities-fr
+
+- story: say confirm outside the flows 2 fr
+  steps:
+  - intent: greet-fr
+  - action: action_greet_user-fr
+  - intent: affirm-fr
+  - action: utter_thumbsup
+
+- story: say greet outside the flows fr
+  steps:
+  - intent: greet-fr
+  - action: action_greet_user-fr
+  - or:
+    - intent: greet-fr
+    - intent: enter_data-fr
+      entities:
+      - name: akela
+  - action: action_greet_user-fr

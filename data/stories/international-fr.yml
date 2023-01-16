@@ -1,0 +1,43 @@
+version: "3.1"
+
+stories:
+
+- story: internatinal-degree-fr yes
+  steps:
+    - intent: internatinal-degree-fr
+    - action: utter_internatinal-degree_fr
+    - action: utter_did_that_help-fr
+    - intent: affirm-fr
+    - action: utter_ask_feedback-fr
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse-fr
+- story: internatinal-degree-fr no
+  steps:
+    - intent: internatinal-degree-fr
+    - action: utter_internatinal-degree_fr
+    - action: utter_did_that_help-fr
+    - intent: deny-fr
+    - action: utter_thumbsup
+    - action: utter_anything_else-fr
+
+- story: mobility-fr yes
+  steps:
+    - intent: mobility-fr
+    - action: utter_mobility_fr
+    - action: utter_did_that_help-fr
+    - intent: affirm-fr
+    - action: utter_ask_feedback-fr
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse-fr
+- story: mobility-fr no
+  steps:
+    - intent: mobility-fr
+    - action: utter_mobility_fr
+    - action: utter_did_that_help-fr
+    - intent: deny-fr
+    - action: utter_thumbsup
+    - action: utter_anything_else-fr

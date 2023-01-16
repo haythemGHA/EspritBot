@@ -1,0 +1,851 @@
+version: "3.1"
+
+stories:
+
+- story: fee surcture Normal Classes tn yes en
+  steps:
+    - intent: fee_structure-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Normal Classes"
+    - slot_was_set:
+        - classe: "Normal Classes"
+    - action: utter_fee_structure_tn_nc-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: fee surcture Normal Classes tn no en
+  steps:
+    - intent: fee_structure-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Normal Classes"
+    - slot_was_set:
+        - classe: "Normal Classes"
+    - action: utter_fee_structure_tn_nc-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: fee surcture Evening Classes tn yes en
+  steps:
+    - intent: fee_structure-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Evening Classes"
+    - slot_was_set:
+        - classe: "Evening Classes"
+    - action: utter_fee_structure_tn_ec-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: fee surcture Evening Classes tn no en
+  steps:
+    - intent: fee_structure-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Evening Classes"
+    - slot_was_set:
+        - classe: "Evening Classes"
+    - action: utter_fee_structure_tn_ec-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: fee surcture Preparatory Cycles tn yes en
+  steps:
+    - intent: fee_structure-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Preparatory Cycles"
+    - slot_was_set:
+        - classe: "Preparatory Cycles"
+    - action: utter_fee_structure_tn_pc-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: fee surcture Preparatory Cycles tn no en
+  steps:
+    - intent: fee_structure-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Preparatory Cycles"
+    - slot_was_set:
+        - classe: "Preparatory Cycles"
+    - action: utter_fee_structure_tn_pc-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: fee surcture Preparatory Cycles int yes en
+  steps:
+    - intent: fee_structure-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Preparatory Cycles"
+    - slot_was_set:
+        - classe: "Preparatory Cycles"
+    - action: utter_fee_structure_int_pc-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: fee surcture Preparatory Cycles int no en
+  steps:
+    - intent: fee_structure-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - intent: classe
+      entities: 
+        - classe: "Preparatory Cycles"
+    - slot_was_set:
+        - classe: "Preparatory Cycles"
+    - action: utter_fee_structure_int_pc-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: fee surcture Normal Classes int yes en
+  steps:
+    - intent: fee_structure-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Normal Classes"
+    - slot_was_set:
+        - classe: "Normal Classes"
+    - action: utter_fee_structure_int_nc-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: fee surcture Normal Classes int no en
+  steps:
+    - intent: fee_structure-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Normal Classes"
+    - slot_was_set:
+        - classe: "Normal Classes"
+    - action: utter_fee_structure_int_nc-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: fee surcture Evening Classes int yes en
+  steps:
+    - intent: fee_structure-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Evening Classes"
+    - slot_was_set:
+        - classe: "Evening Classes"
+    - action: utter_fee_structure_int_ec-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: fee surcture Evening Classes int no en
+  steps:
+    - intent: fee_structure-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Evening Classes"
+    - slot_was_set:
+        - classe: "Evening Classes"
+    - action: utter_fee_structure_int_ec-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: how-finance-en yes
+  steps:
+    - intent: how-finance-en
+    - action: utter_how-finance_en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: how-finance-en no
+  steps:
+    - intent: how-finance-en
+    - action: utter_how-finance_en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: how-much-en Normal Classes tn yes
+  steps:
+    - intent: how-much-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Normal Classes"
+    - slot_was_set:
+        - classe: "Normal Classes"
+    - action: utter_how-much_tn_nc-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: how-much-en Normal Classes tn no
+  steps:
+    - intent: how-much-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Normal Classes"
+    - slot_was_set:
+        - classe: "Normal Classes"
+    - action: utter_how-much_tn_nc-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: how-much-en Evening Classes tn yes
+  steps:
+    - intent: how-much-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Evening Classes"
+    - slot_was_set:
+        - classe: "Evening Classes"
+    - action: utter_how-much_tn_ec-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: how-much-en Evening Classes tn no
+  steps:
+    - intent: how-much-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: action_classe
+    - intent: classe
+      entities: 
+        - classe: "Evening Classes"
+    - slot_was_set:
+        - classe: "Evening Classes"
+    - action: utter_how-much_tn_ec-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: how-much-en Preparatory Cycles tn yes
+  steps:
+    - intent: how-much-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - intent: classe
+      entities: 
+        - classe: "Preparatory Cycles"
+    - slot_was_set:
+        - classe: "Preparatory Cycles"
+    - action: utter_how-much_tn_pc-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: how-much-en Preparatory Cycles tn no
+  steps:
+    - intent: how-much-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - intent: classe
+      entities: 
+        - classe: "Preparatory Cycles"
+    - slot_was_set:
+        - classe: "Preparatory Cycles"
+    - action: utter_how-much_tn_pc-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: how-much-en Normal Classes int yes
+  steps:
+    - intent: how-much-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - intent: classe
+      entities: 
+        - classe: "Normal Classes"
+    - slot_was_set:
+        - classe: "Normal Classes"
+    - action: utter_how-much_int_nc-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: how-much-en Normal Classes int no
+  steps:
+    - intent: how-much-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - intent: classe
+      entities: 
+        - classe: "Normal Classes"
+    - slot_was_set:
+        - classe: "Normal Classes"
+    - action: utter_how-much_int_nc-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: how-much-en Evening Classes int yes
+  steps:
+    - intent: how-much-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - intent: classe
+      entities: 
+        - classe: "Evening Classes"
+    - slot_was_set:
+        - classe: "Evening Classes"
+    - action: utter_how-much_int_ec-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: how-much-en Evening Classes int no
+  steps:
+    - intent: how-much-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - intent: classe
+      entities: 
+        - classe: "Evening Classes"
+    - slot_was_set:
+        - classe: "Evening Classes"
+    - action: utter_how-much_int_ec-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: how-much-en Preparatory Cycles int yes
+  steps:
+    - intent: how-much-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - intent: classe
+      entities: 
+        - classe: "Preparatory Cycles"
+    - slot_was_set:
+        - classe: "Preparatory Cycles"
+    - action: utter_how-much_int_pc-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: how-much-en Preparatory Cycles int no
+  steps:
+    - intent: how-much-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - intent: classe
+      entities: 
+        - classe: "Preparatory Cycles"
+    - slot_was_set:
+        - classe: "Preparatory Cycles"
+    - action: utter_how-much_int_pc-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: self_finance yes en
+  steps:
+    - intent: self_finance-en
+    - action: utter_self-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: self_finance no en
+  steps:
+    - intent: self_finance-en
+    - action: utter_self-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: hostel yes en
+  steps:
+    - intent: hostel-en
+    - action: utter_hostel_en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: hostel no en
+  steps:
+    - intent: hostel-en
+    - action: utter_hostel_en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: hostel_fees tn yes en
+  steps:
+    - intent: hostel_fees-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: utter_hostel_fees-tn-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: hostel_fees tn no en
+  steps:
+    - intent: hostel_fees-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: utter_hostel_fees-tn-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: hostel_fees int yes en
+  steps:
+    - intent: hostel_fees-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - action: utter_hostel_fees-int-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: hostel_fees int no en
+  steps:
+    - intent: hostel_fees-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - action: utter_hostel_fees-int-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: hostel_location foyer esprit s1  yes en
+  steps:
+    - intent: hostel_fees-en
+    - action: utter_hostel_location-en
+    - action: utter_ask_moreinfo
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: hostel_location foyer esprit s2  yes en
+  steps:
+    - intent: hostel_fees-en
+    - action: utter_hostel_location-en
+    - action: utter_ask_moreinfo
+    - intent: affirm-en
+    - action: action_hostel
+    - intent: hostel
+      entities: 
+        - hostel: "ESPRIT Internal Residence"
+    - slot_was_set:
+        - hostel: "ESPRIT Internal Residence"
+    - action: action_EspritInternal_pic-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: hostel_location foyer esprit no en
+  steps:
+    - intent: hostel_fees-en
+    - action: utter_hostel_location-en
+    - action: utter_ask_moreinfo
+    - intent: affirm-en
+    - action: action_hostel
+    - intent: hostel
+      entities: 
+        - hostel: "ESPRIT Internal Residence"
+    - slot_was_set:
+        - hostel: "ESPRIT Internal Residence"
+    - action: action_EspritInternal_pic-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: hostel_location el amen  yes en
+  steps:
+    - intent: hostel_fees-en
+    - action: utter_hostel_location-en
+    - action: utter_ask_moreinfo
+    - intent: affirm-en
+    - action: action_hostel
+    - intent: hostel
+      entities: 
+        - hostel: "Al Amen Residence"
+    - slot_was_set:
+        - hostel: "Al Amen Residence"
+    - action: action_Alamen_pic-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: hostel_location el amen no en
+  steps:
+    - intent: hostel_fees-en
+    - action: utter_hostel_location-en
+    - action: utter_ask_moreinfo
+    - intent: affirm-en
+    - action: action_hostel
+    - intent: hostel
+      entities: 
+        - hostel: "Al Amen Residence"
+    - slot_was_set:
+        - hostel: "Al Amen Residence"
+    - action: action_Alamen_pic-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: restaurant tn s1  yes en
+  steps:
+    - intent: restaurant-en
+    - action: action_restaurant-en
+    - action: utter_ask_moreinfo
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: restaurant tn s2  yes en
+  steps:
+    - intent: restaurant-en
+    - action: action_restaurant-en
+    - action: utter_ask_moreinfo
+    - intent: affirm-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: action_restaurant-tn-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: restaurant tn no en
+  steps:
+    - intent: restaurant-en
+    - action: action_restaurant-en
+    - action: utter_ask_moreinfo
+    - intent: affirm-en
+    - action: action_tunisian_international
+    - intent: tunisian
+      entities: 
+        - nationalite: "tunisian"
+    - slot_was_set:
+        - nationalite: "tunisian"
+    - action: action_restaurant-tn-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: restaurant int  yes en
+  steps:
+    - intent: restaurant-en
+    - action: action_restaurant-en
+    - action: utter_ask_moreinfo
+    - intent: affirm-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - action: action_restaurant-int-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: restaurant int no en
+  steps:
+    - intent: restaurant-en
+    - action: action_restaurant-en
+    - action: utter_ask_moreinfo
+    - intent: affirm-en
+    - action: action_tunisian_international
+    - intent: international
+      entities: 
+        - nationalite: "international"
+    - slot_was_set:
+        - nationalite: "international"
+    - action: action_restaurant-int-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+  

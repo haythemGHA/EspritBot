@@ -1,0 +1,804 @@
+version: "3.1"
+
+stories:
+
+- story: admission req-en yes with mailing
+  steps:
+    - intent: admission-req-en
+    - action: utter_admission_req_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: admission req-en yes without mailing
+  steps:
+    - intent: admission-req-en
+    - action: utter_admission_req_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: admission req-en no with mailing
+  steps:
+    - intent: admission-req-en
+    - action: utter_admission_req_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: admission req-en no without mailing
+  steps:
+    - intent: admission-req-en
+    - action: utter_admission_req_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: join li-en yes with mailing
+  steps:
+    - intent: join-li-en
+    - action: utter_join_li_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: join li-en yes without mailing
+  steps:
+    - intent: join-li-en
+    - action: utter_join_li_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: join li-en no with mailing
+  steps:
+    - intent: join-li-en
+    - action: utter_join_li_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+- story: join li-en no without mailing
+  steps:
+    - intent: join-li-en
+    - action: utter_join_li_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+
+- story: bac apply-en yes with mailing
+  steps:
+    - intent: bachelor_apply-en
+    - action: utter_bachelor_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: bac apply-en yes without mailing
+  steps:
+    - intent: bachelor_apply-en
+    - action: utter_bachelor_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: bac apply-en no with mailing
+  steps:
+    - intent: bachelor_apply-en
+    - action: utter_bachelor_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+- story: bac apply-en no without mailing
+  steps:
+    - intent: bachelor_apply-en
+    - action: utter_bachelor_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+
+- story: website apply-en yes with mailing
+  steps:
+    - intent: website_apply-en
+    - action: utter_website_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: website apply-en yes without mailing
+  steps:
+    - intent: website_apply-en
+    - action: utter_website_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: website apply-en no with mailing
+  steps:
+    - intent: website_apply-en
+    - action: utter_website_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: website apply-en no without mailing
+  steps:
+    - intent: website_apply-en
+    - action: utter_website_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+
+- story: engineering apply-en yes with mailing
+  steps:
+    - intent: Engineering_apply-en
+    - action: utter_Engineering_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: engineering apply-en yes without mailing
+  steps:
+    - intent: Engineering_apply-en
+    - action: utter_Engineering_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: engineering apply-en no with mailing
+  steps:
+    - intent: Engineering_apply-en
+    - action: utter_Engineering_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+- story: engineering apply-en no without mailing
+  steps:
+    - intent: Engineering_apply-en
+    - action: utter_Engineering_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+
+- story: test and fees apply-en yes with mailing
+  steps:
+    - intent: test_and_fee_apply-en
+    - action: utter_test_and_fee_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: test and fees apply-en yes without mailing
+  steps:
+    - intent: test_and_fee_apply-en
+    - action: utter_test_and_fee_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: test and fees apply-en no with mailing
+  steps:
+    - intent: test_and_fee_apply-en
+    - action: utter_test_and_fee_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+- story: test and fees apply-en no without mailing
+  steps:
+    - intent: test_and_fee_apply-en
+    - action: utter_test_and_fee_apply-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+- story: how admission-en yes with mailing 
+  steps:
+    - intent: how-admission-en
+    - action: utter_how_admission_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: how admission-en yes without mailing 
+  steps:
+    - intent: how-admission-en
+    - action: utter_how_admission_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: how admission-en no with mailing
+  steps:
+    - intent: how-admission-en
+    - action: utter_how_admission_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+- story: how admission-en no without mailing
+  steps:
+    - intent: how-admission-en
+    - action: utter_how_admission_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+
+
+- story: when admission-en yes with mailing
+  steps:
+    - intent: when-admission-en
+    - action: utter_when_admission_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: when admission-en yes without mailing
+  steps:
+    - intent: when-admission-en
+    - action: utter_when_admission_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+
+- story: when admission-en no with mailing
+  steps:
+    - intent: when-admission-en
+    - action: utter_when_admission_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+- story: when admission-en no with mailing
+  steps:
+    - intent: when-admission-en
+    - action: utter_when_admission_en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+
+- story: past papers en yes with mailing
+  steps:
+    - intent: past_papers-en
+    - action: utter_past_papers-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: past papers en yes without mailing
+  steps:
+    - intent: past_papers-en
+    - action: utter_past_papers-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: past papers en no with mailing
+  steps:
+    - intent: past_papers-en
+    - action: utter_past_papers-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+- story: past papers en no without mailing
+  steps:
+    - intent: past_papers-en
+    - action: utter_past_papers-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+
+- story: admission_schedule en yes with mailing 
+  steps:
+    - intent: greet-en
+    - action: utter_greet-en
+    - intent: admission_schedule-en
+    - action: utter_schedule-en
+    - action: utter_admission_schedule-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: admission_schedule en yes without mailing 
+  steps:
+    - intent: greet-en
+    - action: utter_greet-en
+    - intent: admission_schedule-en
+    - action: utter_schedule-en
+    - action: utter_admission_schedule-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_ask_feedback
+    - intent: feedback
+    - action: action_tag_feedback
+    - action: utter_thumbsup
+    - action: utter_ask_whatelse
+
+- story: admission_schedule en no with mailing 
+  steps:
+    - intent: greet-en
+    - action: utter_greet-en
+    - intent: admission_schedule-en
+    - action: utter_schedule-en
+    - action: utter_admission_schedule-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "Yes"
+    - slot_was_set:
+        - track_status: "Yes"
+    - action: action_ask_email
+    - intent: enter_data 
+      entities:
+        - email: maxmeier@firma.de
+    - action: action_Reglement_concours_esprit
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+- story: admission_schedule en no without mailing 
+  steps:
+    - intent: greet-en
+    - action: utter_greet-en
+    - intent: admission_schedule-en
+    - action: utter_schedule-en
+    - action: utter_admission_schedule-en
+    - action: action_accept_mailing
+    - intent: track_mailing-en
+      entities: 
+        - track_status: "No"
+    - slot_was_set:
+        - track_status: "No"
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_thumbsup
+    - action: action_Esprit_link
+    - action: utter_anything_else
+
+
+

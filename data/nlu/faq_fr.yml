@@ -1,0 +1,313 @@
+version: "3.1"
+
+nlu:
+##Francais
+
+- intent : admission-req-fr
+  examples: |
+    - Quelles sont les conditions d'admission au cursus de jour Esprit Ingénieur ?
+    - Comment puis-je intégrer le programme de cours de jour Esprit Engineer ?
+    - Je souhaite connaître les conditions d'admission au cursus ingénieur Esprit
+    - Quelle est la procédure pour être admis à l'université Esprit ?
+    - Quel est le processus d'obtention d'une admission à l'université Esprit ?
+    - Comment puis-je obtenir une admission à l'université Esprit ?
+    - J'ai besoin d'orientation vers l'obtention de l'admission à l'université Esprit.
+    - J'ai besoin d'informations sur la façon d'obtenir une admission à l'université Esprit.
+    - Quelles sont les informations concernant l'admission en diplôme en esprit ?
+    - Quels sont les détails d'une admission?
+    - Quelles sont les mises à jour concernant l'obtention de l'admission pour rejoindre esprit ?
+    - Existe-t-il des informations sur l'admission en esprit ?
+    - Comment un étudiant sera-t-il admis a cette université ?
+    - quelle est la procédure d'admission
+    - comment puis-je faire une demande d'admission
+    - Quelles sont les conditions d'admission au programme Esprit Ingénieur ?
+    - Quelles sont les étapes d'admission ?
+
+- intent : join-li-fr
+  examples: |
+    - En quelle année puis-je intégrer ESPRIT avec une licence en informatique ?
+    - J'ai une licence en informatique, comment intégrer Esprit ?
+
+- intent: bachelor_apply-fr
+  examples: |
+    - Comment les étudiants de baccalauréat peuvent-ils postuler ?
+    - Quelles sont les voies par lesquelles les étudiants de baccalauréat peuvent postuler ?
+    - Existe-t-il un moyen par lequel les étudiants de bac peuvent postuler ?
+    - Quelle est la procédure pour postuler aux étudiants de bac ?
+    - Quelle est la procédure de candidature pour les étudiants ayant baccalauréat ?
+
+- intent: website_apply-fr
+  examples: |
+    - J'ai besoin d'informations sur la manière de postuler ainsi que sur le site d'admission en ligne.
+    - J'ai besoin du site Web pour postuler et je veux aussi savoir quel est le processus de candidature ?
+    - Quelle est la procédure de candidature et depuis quel site doit-on postuler ?
+    - Sur quel site internet la candidature a-t-elle lieu et quelle est sa procédure ?
+    - Comment dois-je postuler et veuillez m'indiquer le site Web à partir duquel je dois postuler.
+
+- intent: Engineering_apply-fr
+  examples: |
+    - Quelles sont les informations concernant l'admission en diplôme d'ingénieur ?
+    - Quels sont les détails d'une admission en ingénierie ?
+    - Quelles sont les mises à jour concernant l'obtention de l'admission en ingénierie ?
+    - Existe-t-il des informations sur l'admission en ingénierie ?
+    - Comment un étudiant sera-t-il admis en ingénierie ?
+
+- intent: test_and_fee_apply-fr  
+  examples: |  
+    - Quand dois-je postuler pour les tests et quel est le montant des frais de dossier requis ?
+    - Quel montant faut-il pour les frais de dossier et quand peut-on demander des tests ?
+    - J'ai besoin d'informations sur l'application des tests et le montant des frais de dossier.
+    - J'ai besoin de précisions concernant la date d'application des tests et le montant des frais de dossier.
+    - Quelle est la date d'application des tests et à combien s'élèvent les frais de dossier ?
+    - Quand demander les tests et les frais de formulaire?
+    - Quand dois-je postuler pour les tests et quel est le montant des frais de dossier requis ?
+    - Quel montant faut-il pour les frais de dossier et quand peut-on demander des tests ?
+    - J'ai besoin d'informations sur l'application des tests et le montant des frais de dossier.
+    - J'ai besoin de précisions concernant la date d'application des tests et le montant des frais de dossier.
+    - Quelle est la date d'application des tests et à combien s'élèvent les frais de dossier ?
+
+- intent: how-admission-fr
+  examples: |
+    - Comment se passe l'examen d'admission ?
+    - comment pouvons-nous être admis à Esprit
+    - Quelle est la procédure pour être admis à l'université Esprit ?
+    - Quel est le processus d'obtention d'une admission à l'université Esprit ?
+    - Comment puis-je obtenir une admission à l'université Esprit ?
+    - J'ai besoin d'orientation vers l'obtention de l'admission à l'université Esprit.
+    - J'ai besoin d'informations sur la façon d'obtenir une admission à l'université Esprit.
+
+- intent: when-admission-fr
+  examples: |
+    - Quand il est possible de se préinscrire sur le site
+    - Quand puis-je rejoindre Esprit ?
+    - Quand commence l'amdission?
+    - Quand commence l'amdission?
+    - Quelles sont les dates d'admission
+    - quand ont lieu les admissions
+    - Quand postuler aux tests ?
+- intent: past_papers-fr
+  examples: |
+    - où puis-je obtenir des échantillons de papiers de test
+    - des exemples de papiers de test
+    - papiers passés
+    - Quelqu'un a-t-il du matériel en ligne pour la préparation du test d'admission Esprit ou n'importe quel lien plz, faites-moi savoir si quelqu'un l'a ??
+    - J'ai besoin de matériel de préparation en ligne pour le test d'admission Esprit.
+    - Quelles sont les mises à jour des liens vers le matériel en ligne pour la préparation du test d'admission Esprit ?
+    - Quelles sont les informations concernant la préparation du test d'admission Esprit à travers l'apprentissage en ligne et les liens ?
+    - Le matériel en ligne et les liens pour la préparation du test d'admission à l'université Esprit sont urgents, j'ai besoin d'informations à ce sujet ?
+    - Le matériel en ligne pour la préparation du test d'admission à l'université Esprit est requis, Quelles sont les mises à jour à ce sujet ?
+
+- intent: admission_schedule-fr
+  examples: |
+    - date limite pour les formulaires d'admission?
+    - date limite d'admission ?
+    - date limite pour postuler ?
+    - les dates d'admission ?
+    - calendrier des dates d'admission?
+    - quand puis-je faire une demande d'admission à Esprit ?
+    - quand aura lieu le test ?
+    - quand aura lieu le test
+    - quand dois-je postuler pour un test
+    - les dates de candidature ?
+    - les dates d'admission ?
+    - les dates des tests d'entrée ?
+    - les dates de dépôt des candidatures ?
+    - Quand peut-on faire une demande d'admission à Esprit ?
+    - Quand aura lieu le site web ?
+    - Quelles sont les dates pour postuler au Test d'admission ?
+    - quelle est la dernière date du test ?
+    - Quelle serait la dernière date du test ?
+    - Quel est l'horaire du test d'admission ?
+    - Quelles sont les informations concernant la date du dernier test d'admission ?
+    - Quelles sont les mises à jour concernant la dernière date de test d'admission ?
+    - Quelles sont les dates de début et de fin des admissions ?
+    - Quand débutera et se terminera l'admission ?
+    - Quelles sont les informations concernant la date d'ouverture et de fermeture des admissions ?
+    - Quelles sont les mises à jour concernant la date de début et de fin d'admission ?
+    - Quand ouvriront et fermeront les admissions ?
+    - où le résultat sera annoncé
+    - quand le résultat sera annoncé pour le test d'admission
+
+- intent : Esprit-courses-fr
+  examples: |
+    - combien de cours peut-on inscrire dans Esprit ?
+    - combien de cours peut-on opter dans Esprit ?
+    - limite de parcours en Esprit ?
+    - Type de cours en Esprit
+    - Quelles sont les majeures disponibles?
+    - Parlez-moi des majeures disponibles?
+    - Y a-t-il plusieurs majeures disponibles ?
+
+- intent: offered-programs-fr
+  examples: |
+    - Quels sont les domaines d'ingénierie proposés par l'université Esprit ?
+    - L'ingénierie à l'université Esprit est divisée en quels différents domaines proposés ?
+    - Quels domaines d'ingénierie l'université Esprit propose-t-elle à ses étudiants ?
+    - Quelles sont les filières d'Ingénierie proposées par l'université Esprit ?
+    - Quelles sections d'ingénierie l'université Esprit propose-t-elle ?
+    - quels programmes d'études sont offerts aux étudiants de premier cycle
+    - quels programmes diplômants sont proposés aux étudiants diplômés
+    - quels programmes diplômants sont proposés aux étudiants de troisième cycle
+    - quels sont les différents cours proposés
+    - différents cours dispensés par l'université
+    - liste des différents cours
+    - liste des différents programmes
+    - pouvez-vous m'aider avec les programmes proposés par l'université esprit
+    - différents programmes offerts par l'Université
+    - différents programmes de formation proposés
+    
+- intent: evening-class-fr
+  examples: |
+    - Puis-je avoir des détails sur le cours du soir ?
+    - Je veux me renseigner sur le cours du soir
+    - Parlez-moi du cours du soir
+    - Cours du soir ??
+    - J'ai besoin d'informations concernant les cours du soir.
+    - Quels sont les détails des cours dispensés le soir ?
+    - Quelles sont les mises à jour sur les cours qui ont lieu le soir ?
+    - Quelles sont les mises à jour concernant les cours du soir ?
+    - Des informations ont-elles été fournies sur les cours du soir ?
+
+- intent : 3A3B-diff-fr
+  examples: |
+    - Quelle est la différence entre 3A et 3B ?
+    - Y a-t-il une différence entre 3A et 3B ?
+    - Quels sont les différents cours disponibles en 3ème année ?
+
+- intent: major-info-fr
+  examples: |
+    - Quelle est l'option
+    - Parlez-moi de l'option
+    - Je veux connaître les détails de l'option
+    - L'option consiste en quoi
+- intent: Specialities-type-fr
+  examples: |
+    - Quelles sont les spécialités disponibles chez Esprit
+    - Quelles sont les spécialités en 4ème année
+    - Quelles sont les spécialités
+    - Parlez-moi des spécialités d'Esprit
+    - Parlez-moi de la spécialité [informatique](specialite) d'Esprit
+    - Parlez-moi de l'[Electromecanique](specialite) chez Esprit
+    - Parlez-moi du [Génie civil](specialite) en Esprit
+    - Parlez-moi de la [Télécommunication](specialite) chez Esprit
+    - Parlez-moi des options dans esprit
+    - Quelles sont les spécialités
+    - Quelles spécialités sont disponibles dans esprit
+    - Quelles sont les options
+    - Y a-t-il des options dans l'esprit
+    - Y a-t-il des spécialités à Esprit
+    - Parlez-moi des spécialités disponibles dans esprit
+    - Parlez-moi des spécialités disponibles en 4ème année
+    - Quelles sont les options disponibles en 4ème année dans ESPRIT
+    - Quelles sont les spécialités disponibles en 4ème année en Esprit
+    - Quelles sont les options en 4ème année
+
+- intent: academic_period-fr
+  examples: |
+    - Quand commence et se termine l'année académique de l'université ?
+    - Quel est le calendrier de l'année universitaire suivi par l'université ?
+    - Quand commence l'année académique de l'université ?
+    - Quand se termine l'année académique ?
+- intent: fee_structure-fr
+  examples: |
+    - quels sont les frais d'inscription ?
+    - Quelle est la structure de frais
+    - quels sont les frais de scolarité
+    - J'ai besoin d'informations sur les frais symboliques de l'université Esprit ?
+    - combien de frais symboliques devrons-nous payer à l'université Esprit ?
+    - Quel montant est indispensable pour le paiement des frais de jeton à l'université Esprit ?
+    - Quel montant est payé pour les frais de jeton à l'université Esprit ?
+    - J'ai besoin d'informations sur le montant à payer en tant que frais symboliques à l'université Esprit ?
+    - Quels seront les frais de semestre si j'apparais sur la liste de mérite ?
+    - A combien s'élèvent les frais de scolarité des étudiants inscrits sur la liste de mérite ?
+    - Quels seront mes frais de semestre après mon apparition sur la liste de mérite ?
+    - A combien s'élèveront mes frais de semestre si j'arrive à figurer sur la liste de mérite ?
+    - Après avoir figuré sur la liste de mérite, quels seront mes frais de semestre ?
+    - Quelle est la structure tarifaire du diplôme d'ingénieur ?
+    - A combien s'élèvent les frais d'inscription au diplôme d'ingénieur ?
+    - Quel est le montant des frais de soumission pour étudier le diplôme d'ingénieur ?
+    - Combien de frais devra-t-on payer pour étudier l'ingénierie ?
+    - Quelles sont les informations concernant les frais du diplôme d'ingénieur ?
+
+- intent: how-finance-fr
+  examples: |
+    - comment financer mes études
+    - existe-t-il une méthode pour faciliter le paiement
+    - Quelles sont les conditions de paiement ?
+    - Parlez-moi des modalités de paiement?
+    - Comment puis-je payer les frais ?
+- intent: how-much-fr
+  examples: |
+    - Quel est le coût total de l'éducation ?
+    - Combien coûte l'éducation ?
+    - Combien ça coûte une année chez Esprit ?
+    - Prix
+    - Quel est le prix
+    - Frais ?
+    - Frais d'inscription
+
+- intent: self_finance-fr
+  examples: |
+    - Quelles sont les informations concernant le siège Self-Finance ?
+    - Quels sont les détails du siège Self-Finance ?
+    - Quelles sont les mises à jour concernant le siège Self-Finance ?
+    - Existe-t-il des informations sur le siège de Self-Finance ?
+    - J'ai besoin de conseils en ce qui concerne le siège d'auto-financement.
+
+- intent: hostel-fr
+  examples: |
+    - y a-t-il un foyer de jeunesse disponible
+    - foyer pour filles
+    - installation aux foyer
+    - foyer sur le campus
+    - auberge sur le campus
+    - comment puis-je faire pour m'inscrire au foyer
+    - Le renouvellement des inscriptions en foyer
+
+- intent: hostel_fees-fr
+  examples: |
+    - Quel est le coût total du foyer ?
+    - Combien coûte le foyer ?
+    - Combien ça coûte une année au foyer ?
+    - Prix du foyer
+    - Frais du foyer
+    - Inscription aux frais du foyer
+    - Combien de frais devra-t-on payer pour avoir accès au foyer ?
+    - Quelles sont les informations concernant les tarifs d'Esprit foyer ?
+- intent: hostel_location-fr
+  examples: |
+    - où est le foyer esprit ?
+    - combien de foyer dans l'esprit
+    - différence entre les foyer dans l'esprit
+    - je veux une photo d'esprit residence
+    - photo du foyer
+    - photos du foyer
+
+- intent: restaurant-fr
+  examples: |
+    - y a-t-il un restaurant disponible ?
+    - comment puis-je faire pour l'inscription au restaurant
+    - restaurant
+    - Quel est le coût total du restaurant ?
+    - Combien coûte le restaurant ?
+    - Combien ça coûte une année au restaurant ?
+    - Prix du restaurant
+    - les frais de restauration
+
+- intent: mobility-fr
+  examples: |
+    - La possibilité d'avoir une expérience internationale
+    - Est-il possible de poursuivre mes études à l'étranger ?
+    - Existe-t-il des possibilités d'étudier à l'étranger ?
+    
+- intent : internatinal-degree-fr
+  examples : |
+    - Qu'est-ce que le programme de diplôme international 
+    - Parlez-moi du programme de diplôme international
+- intent: Warning-fr
+  examples: |
+    - Quel est le score minimum requis pour éviter l'avertissement académique?
+    - combien d'absence faut-il pour éviter l'avertissement?
+    - de combien d'absences ai-je besoin pour éviter les avertissements?
+    - puis-je éviter les avertissements si j'ai un crédit supérieur à 45.
+    - puis-je éviter les avertissements si j'ai un crédit inférieur à 45.

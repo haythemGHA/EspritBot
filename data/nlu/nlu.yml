@@ -1,0 +1,430 @@
+version: "3.1"
+
+nlu:
+##English
+
+
+- intent: Esprit-en
+  examples: |
+    - Esprit ??
+    - tell me about esprit 
+    - want to know esprit
+    - want to know this school
+    - esprit university ?
+    - tell me more about this university 
+    - wanna know esprit
+    - what'is Esprit ??
+    - why Esprit
+    - why should I select esprit?
+    - why should I switch to esprit?
+    - what's so great about choosing Esprit?
+    - how is Esprit better than others
+    - why should i use esprit instead of other school ?
+    - Is it better to choose Esprit
+    - give me a reason to choose Esprit
+    - Why switch to esprit?
+    - why study in esprit
+    - why should I select esprit
+    - I meant why you over competitors ?
+    - why is Esprit useful
+    - why is esprit better?
+    - why ESPRIT?
+    - why should i choose esprit
+    - why is esprit so good?
+    - why is esprit good
+    - why do I need from esprit
+    - why only esprit
+    - why should I migrate to esprit?
+    - why migrate to esprit?
+    - why switch to esprit?
+    - why would i use your formation
+    - why is esprit interesting
+    - Why esprit?
+    - Why choose Esprit?
+    - why Esprit?
+    - is Esprit number 1 university?
+    - why should i choose Esprit university?
+    - why Esprit is good for me?
+    - why should i apply at Esprit university?
+    - why Esprit university?
+- intent: contact-en
+  examples: |
+    - who should be contacted for further information on admission
+    - who should I contact to obtain additional information on admission
+    - how can I find out more
+    - who I should contact for more information
+    - I want to have more information about esprit
+    - I want to contact you
+    - I want your contacts
+    - how to contact Esprit
+    - contact details
+    - how to connect with Esprit
+    - Esprit contact number
+
+- intent: Esprit-address-en
+  examples: |
+    - where is Esprit
+    - where is Esprit located
+    - Esprit address
+    - Esprit location
+    - Esprit address
+    - location of Esprit
+    - location of Esprit
+
+- intent: email-complaint-en
+  examples: |
+    - I did not receive a pre-registration confirmation email
+    - I have not yet received an admission email
+
+- intent: interview-reschedule-en
+  examples: |
+    - I want to postpone my interview.
+    - I want to delay my interview
+    - I want to reschedule my interview
+
+- intent: social_events-en
+  examples : |
+    - which events take place in Esprit
+    - which events take place at Esprit
+    - events in Esprit
+    - programming events at Esprit
+    - social events at Esprit
+    - concert at Esprit
+
+- intent: library-en
+  examples : |
+    - is library available at Esprit
+    - library at Esprit
+    - library service at Esprit
+    - library in Esprit
+
+- intent: cafeteria-en
+  examples : |
+    - is cafeteria available at Esprit
+    - cafeteria
+    - cafe
+    
+
+- intent: academic_office-en
+  examples : |
+    - where is academic office
+    - where is academic office located
+    - academic office
+    - office of academics
+
+- intent: director_office-en
+  examples : |
+    - where is director office
+    - where is director office located
+    - director office
+    - office of director
+
+- intent: students_affair-en
+  examples : |
+    - where is student affair office
+    - where is student affair office located
+    - student affair office
+    - office of student affair
+
+- intent: job_rate-en
+  examples : |
+    - job rate at Esprit
+    - what is job rate of esprit
+    - what is job rate at Esprit
+    - job rate
+    - job rate Esprit
+    - job rate at Esprit
+    - job rate at Esprit university
+    - job rate at Esprit
+    - what is job rate at Esprit university
+
+- intent: enter_data
+  examples: |
+    - A customer service bot
+    - A wolf bot
+    - I am [Molka dridi](name)
+    - I am [Dhia ben amor](name)
+    - I am [Mansour youssef](name)
+    - I wrote it in [english](language)
+    - I wrote it in [french](language)
+    - I'm [Gharbi haithem](name)
+    - I'm [jaidi raed](name)
+    - I'm [chaaba aicha](name)
+    - I'm [Sofyenne Bouguerra](name)
+    - It is [Drew@Mccarthy.com](email)
+    - My email is [Richard@Simmons.com](email)
+    - My name is [Ashleigh Mees](name)
+    - My name is [chelsea Parker](name)
+    - My name is [jessie maglione](name)
+    - My name is [Kenneth Sherman](name)
+    - My name is [Lee George](name)
+    - My name is [Louise Caudill](name)
+    - My name is [Richard smith](name)
+    - My name is [Shane Goodyear](name)
+    - My name is [Sondra Boyd](name)
+    - My name si [tom Harbin](name)
+    - This is [Kim Vanderveen](name)
+    - This is [Norma Taylor](name)
+    - [Carolyn.Eisenhauer@Watkins.com](email)
+    - [David Carter](name)
+    - [Ebony@gmail.com](email)
+    - [Elise](name)
+    - [Im Phyllis Howard](name)
+    - [J_Herrera@gmail.com](email)
+    - [Jamie Moore](name)
+    - [Jane Baines](name)
+    - [John Strickland](name)
+    - [K_Claytor@yahoo.com](email)
+    - [K_Rainey@Yochum.net](email)
+    - [Kristin@yahoo.com](email)
+    - [Linda Mchone](name)
+    - [Michele Perry](name)
+    - [Michelle Garcia](name)
+    - [Michelle Vinion](name)
+    - [Mr. Sweney](name)
+    - [Robert.Sparks@gmail.com](email)
+    - [Terri Cline](name)
+    - [William Zelkind](name)
+    - [Willie@gmail.com](email)
+    - [a@b.com](email)
+    - [abhbose3k@gmail.com](email)
+    - [arabic](language)
+    - [english](language)
+    - [english](language) is my language 
+    - [english](language) is the only language but I want to add more
+    - [french](language)
+    - [french](language) is my language 
+    - [french](language) is the only language but I want to add more
+    - can you try [E_Conder@gmail.com](email) instead?
+    - email = [Patti.Salazar@gmail.com](email)
+    - i don't have one
+    - i don't have it
+    - i don't know
+    - i have none
+    - it is in [english](language)
+    - it is in [french](language)
+    - it's [Katie Betz](name)
+    - it's [R_Iuliucci@yahoo.com](email)
+    - it's [Robert Weir](name)
+    - language = [english](language)
+    - language = [french](language)
+    - maybe then instead [James@Anast.com](email)
+    - mi name is [Kathy Wright](name)
+    - my business mail is [s_Dibenedetto@Simpson.net](email)
+    - my email is [Carole@Hart.com](email)
+    - my email is [Elinor_Stock@Higgenbotham.com](email)
+    - my email is [K_Spivey@yahoo.com](email)
+    - my email is [Kelly@Coulter.net](email)
+    - my email is [M_Jones@Luna.com](email)
+    - my email is [Mia_Gainey@gmail.com](email)
+    - my email is [S_Calderon@Cofield.com](email)
+    - my email is [Virginia@Brown.com](email)
+    - my emayl is [V_Comley@Nelson.com](email)
+    - my name is [Alexander Kohn](name)
+    - my name is [betty mclendon](name)
+    - my name is [Brian Leung](name)
+    - my name is [Claude Ake](name)
+    - my name is [Earl Ring](name)
+    - my name is [Felicia Cosby](name)
+    - my name is [Frances Kunkle](name)
+    - my name is [Greg King](name)
+    - my name is [james culpit](name)
+    - my name is [Jermaine Mccleery](name)
+    - my name is [John Evers](name)
+    - my name is [Joseph Parson](name)
+    - my name is [Monica Ser](name)
+    - my name is [Nigel Partida](name)
+    - my name is [Staci Simpson](name)
+    - my name is [susan crandall](name)
+    - my name is [Tabitha Schoenthal](name)
+    - my name's [Michael Peppers](name)
+    - ok it's [Hee@yahoo.com](email)
+    - ok its [P_Simpkins@Suehs.com](email)
+    - you speak [english](language)?
+    - you speak [french](language)?
+    - the assistant speaks [english](language)
+    - the assistant speaks [french](language)
+    - the language is [english](language)
+    - the language is [french](language)
+    - the people speak [english](language)
+    - the people speak [french](language)
+    - until now it’s only in [english](language)
+    - until now it’s only in [french](language)
+    - can i communicate with the bot in [english](language)?
+    - can i communicate with the bot in [french](language)?
+    - can talk to you in [english](language)?
+    - can talk to you in [french](language)?
+    - My name is [manuel](name)
+    - I am [Aniket](name)
+    - Sorry  it's not [suleman](name) is [Shehzad](name)
+
+- intent: ask_languagesbot-en
+  examples: |
+    - Are you familiar with more than one language?
+    - Can you communicate in any other languages?
+    - Can you speak more than one language?
+    - Do you know any other languages?
+    - Do you know other languages?
+    - Do you speak [german](language)?
+    - Do you speak any other languages?
+    - Do you understand [spanish](language)?
+    - How many different languages are you fluent in?
+    - How many languages are you familiar with?
+    - How many languages can you speak?
+    - How many languages do you have knowledge of?
+    - How many languages do you know?
+    - In what languages are you fluent enough?
+    - In which languages are you fluent?
+    - In which languages can you speak?
+    - Speak any other languages?
+    - What are all of the different languages you can speak?
+    - What are the languages you can speak?
+    - What do you speak?
+    - What languages are you fluent in?
+    - What languages can you communicate in?
+    - What languages can you converse in?
+    - What languages can you use?
+    - What languages do you know how to use?
+    - What languages do you know?
+    - What languages do you speak?
+    - Which languages are you familiar with?
+    - Which languages do you speak?
+    - are you bilingual?
+    - are you multilingual?
+    - can you speak [Spanish](language)?
+    - can you speak in [italian](language)?
+    - do you know [chinese](language)
+    - do you speak [dutch](language)?
+    - do you speak [german](language)?
+    - do you speak any other languages?
+    - how many languages are you fluent in?
+    - how many languages do you know?
+    - tell me some languages you know?
+    - what else do you know besides [English](language)?
+    - what foreign languages are you fluent in?
+    - what foreign languages do you know?
+    - what language do you use
+    - what languages are you comfortable speaking at?
+    - what languages are you familiar with?
+    - what languages are you good at speaking?
+    - what languages do you know?
+    - what languages do you speak
+    - what languages you are well versed ?
+    - what languages you can be comfortable speaking?
+    - what languages you can handle well?
+    - what languages you can speak ?
+    - what languages you know?
+    - what languages you prefer more speaking at?
+    - which languages do you understand?
+    - you know [French](language)
+    - you speak [french](language) ?
+    - I want to speak binary with you
+    - ARE YOU [SPANISH](language)
+    - we cant converse in [french](language)?
+    - can we converse in [french](language)?
+    - Do you speak [italian](language)?
+  
+- intent: human_handoff-en
+  examples: |
+    - Can I speak to anyone who can really help me?
+    - Could I talk to [Tyrone King](name)?
+    - I don't wanna talk to a bot
+    - I dont like to talk to a machine
+    - I want to talk to a human
+    - I want to talk to the founders
+    - are there also humans working for Esprit?
+    - can I speak to a person?
+    - can i please speak to a human?
+    - can you forward me to your team
+    - can you please connect me to a real Esprit employee?
+    - can you put me in touch with a human?
+    - do you have human support ?
+    - gimme a proper human
+    - give me a human
+    - give me a human now
+    - human handoff
+    - i dont wanna talk to a bot
+    - i want to speak to a real person
+    - i want to speak to Student service
+    - i want to talk to a human
+    - i want to talk to a person
+    - i want to talk to human
+    - i want to talk to someone at Esprit
+    - i want to talk to someone else
+    - i want to talk to someone who is smarter than you
+    - i would like to speak to a person
+    - i'd rather speak with a real Esprit employee
+    - id like to talk to a real Esprit employee
+    - let me speak with a real person please
+    - let me talk to a human
+    - let me talk to a real person
+    - please give me a human
+    - service agent
+    - someone from customer care
+    - speak to a real person
+    - talking to a bot is stupid
+    - that's annoying I'd like to speak to someone real
+    - thats not helping, can i talk to human?
+    - wrong i want to speak to a human
+    - can i speak to human
+    - can i speak to your human
+    - i want to chat with human
+    - How do I talk to a human
+    - talk with a human
+    - Can i talk to a human instead
+    - nevermind.... you're not human ... I need to talk to a live person
+    - Can you get a human to assist me?
+    - Can i talk to a human?
+    - Can I talk to a human
+    - Can I speak to a human?
+    - can i speak to a human
+    - no, i want to talk to human
+    - can you hand a conversation over to a human?
+    - can I talk to human?
+    - can I talk to human
+    - talk to human
+    - i want human :(
+    - can i talk to human
+    - i want to talk to a human \
+    - i want to speak to human
+    - can i talk to a real person?
+    - connect me to a real person
+    - I need a real person
+    - can i took with a real person
+    - let me speak to a real person
+    - let me speak to a real person please
+    - i want to talk to a real person
+
+
+- synonym: english
+  examples: |
+    - English
+    - en
+    - eng
+    - Eng
+    - ENGLISH
+
+- synonym: french
+  examples: |
+    - francais
+    - fr
+    - Fr
+    - Francais
+    - FRENCH
+
+- synonym: esprit
+  examples: |
+    - Esprit
+    - ESPRIT
+    - esprit university
+
+- synonym: all
+  examples: |
+    - both
+- synonym: date
+  examples: |
+    - dates
+
+- regex: greet-en
+  examples: |
+    - hey[^\s]*

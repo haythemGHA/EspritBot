@@ -1,0 +1,24 @@
+version: "3.1"
+
+stories:
+- story: chitchat
+  steps:
+  - intent: canthelp-en
+  - action: utter_canthelp-en
+- story: greet + canthelp
+  steps:
+  - intent: greet-en
+  - action: action_greet_user
+  - intent: canthelp-en
+  - action: utter_canthelp-en
+
+- story: chitchat fr
+  steps:
+  - intent: canthelp-fr
+  - action: utter_canthelp-fr
+- story: greet + canthelp fr
+  steps:
+  - intent: greet-fr
+  - action: action_greet_user-fr
+  - intent: canthelp-fr
+  - action: utter_canthelp-fr

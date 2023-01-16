@@ -1,0 +1,118 @@
+version: "3.1"
+
+- rule: Say goodbye anytime the user says goodbye english
+  steps:
+  - intent: goodbye-en
+  - action: utter_goodbye_en
+
+- rule: Say 'I am a bot' anytime the user challenges english
+  steps:
+  - intent: bot_challenge-en
+  - action: utter_iamabot
+
+- rule: restart english
+  steps:
+  - intent: restart-en
+  - action: action_restart_with_button
+  - action: utter_restart
+
+- rule: intent Name after utter_enter_data
+  steps:
+  - action: utter_ask_name
+  - intent: enter_data
+
+- rule: ask feedback; feedback; tag it
+  steps:
+  - action: utter_ask_feedback
+  - intent: feedback
+  - action: action_tag_feedback
+  - action: utter_thumbsup
+  - action: utter_ask_whatelse
+
+- rule: ask feedback; out_of_scope_other
+  steps:
+  - action: utter_ask_feedback
+  - intent: out_of_scope_other
+  - action: utter_out_of_scope_other
+  - action: utter_ask_whatelse
+
+- rule: ask feedback; out_of_scope_non_english
+  steps:
+  - action: utter_ask_feedback
+  - intent: out_of_scope_non_english
+  - action: utter_out_of_scope_non_english
+  - action: utter_ask_whatelse
+
+- rule: ask feedback; thank
+  steps:
+  - action: utter_ask_feedback
+  - intent: thank-en
+  - action: utter_noworries
+  - action: utter_ask_whatelse
+
+- rule: ask feedback; other
+  steps:
+  - action: utter_ask_feedback
+  - or:
+    - intent: enter_data
+    - intent: affirm-en
+    - intent: deny-en
+  - action: utter_thumbsup
+  - action: utter_ask_whatelse
+
+- rule: Restart after a full two stage fallback
+  condition:
+    - active_loop: action_two_stage_fallback
+  steps:
+      - action: action_two_stage_fallback
+      - active_loop: null
+      - action: action_restart_with_button
+
+
+###francais
+
+- rule: Say goodbye anytime the user says goodbye francais
+  steps:
+  - intent: goodbye-fr
+  - action: utter_goodbye_fr
+
+- rule: Say 'I am a bot' anytime the user challenges francais
+  steps:
+  - intent: bot_challenge-fr
+  - action: utter_iamabot-fr
+
+- rule: intent Name after utter_enter_data francais
+  steps:
+  - action: utter_ask_name-fr
+  - intent: enter_data-fr
+
+- rule: ask feedback; feedback; tag it
+  steps:
+  - action: utter_ask_feedback-fr
+  - intent: feedback
+  - action: action_tag_feedback
+  - action: utter_thumbsup
+  - action: utter_ask_whatelse-fr
+
+- rule: ask feedback; thank frrr
+  steps:
+  - action: utter_ask_feedback-fr
+  - intent: thank-fr
+  - action: utter_noworries-fr
+  - action: utter_ask_whatelse-fr
+
+- rule: ask feedback; other
+  steps:
+  - action: utter_ask_feedback-fr
+  - or:
+    - intent: enter_data-fr
+    - intent: affirm-fr
+    - intent: deny-fr
+  - action: utter_thumbsup
+  - action: utter_ask_whatelse-fr
+
+- rule: restart francais
+  steps:
+  - intent: restart-fr
+  - action: action_restart_with_button-fr
+  - action: utter_restart-fr

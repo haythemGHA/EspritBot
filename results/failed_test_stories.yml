@@ -1,0 +1,51 @@
+version: "3.1"
+stories:
+- story: happy path 1 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet-en
+  - action: utter_greet-en  # predicted: action_greet_user
+  - intent: mood_great-en
+  - action: utter_happy-en  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+- story: happy path 2 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet-en
+  - action: utter_greet-en  # predicted: action_greet_user
+  - intent: mood_great-en
+  - action: utter_happy-en  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: goodbye-en
+  - action: utter_goodbye_en  # predicted: action_default_fallback
+- story: sad path 1 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet-en
+  - action: utter_greet-en  # predicted: action_greet_user
+  - intent: mood_unhappy-en
+  - action: utter_cheer_up-en  # predicted: action_default_fallback
+  - action: utter_did_that_help-en  # predicted: action_default_fallback
+  - intent: affirm-en
+  - action: utter_happy-en  # predicted: utter_ask_feedback
+  - action: action_listen  # predicted: action_default_fallback
+- story: sad path 2 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet-en
+  - action: utter_greet-en  # predicted: action_greet_user
+  - intent: mood_unhappy-en
+  - action: utter_cheer_up-en  # predicted: action_default_fallback
+  - action: utter_did_that_help-en  # predicted: action_default_fallback
+  - intent: deny-en
+  - action: utter_goodbye_en  # predicted: utter_thumbsup
+- story: sad path 3 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet-en
+  - action: utter_greet-en  # predicted: action_greet_user
+  - intent: mood_unhappy-en
+  - action: utter_cheer_up-en  # predicted: action_default_fallback
+  - action: utter_did_that_help-en  # predicted: action_default_fallback
+  - intent: deny-en
+  - action: utter_goodbye_en  # predicted: utter_thumbsup
+- story: bot challenge (.\tests\test_stories.yml)
+  steps:
+  - intent: bot_challenge-en
+  - action: utter_iamabot  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback

@@ -1,0 +1,50 @@
+[
+  {
+    "text": "Yes",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "Yes",
+        "entity": "track_status"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "NO",
+    "entities": [
+      {
+        "start": 0,
+        "end": 2,
+        "value": "NO",
+        "entity": "track_status"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Oui",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "Oui",
+        "entity": "track_status-fr"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Non",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "Non",
+        "entity": "track_status-fr"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

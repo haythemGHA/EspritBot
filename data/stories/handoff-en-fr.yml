@@ -1,0 +1,80 @@
+version: "3.1"
+
+stories:
+- story: human handoff
+  steps:
+  - intent: human_handoff-en
+  - action: utter_contact_en
+
+- story: greet + handoff
+  steps:
+  - intent: greet-en
+  - action: action_greet_user
+  - intent: human_handoff-en
+  - action: utter_contact_en
+
+- story: handoff
+  steps:
+  - intent: human_handoff-en
+  - action: utter_ask_handoff-en
+  - action: action_handoff_options
+  - intent: affirm-en
+  - action: action_handoff
+
+- story: handoff
+  steps:
+  - intent: human_handoff-en
+  - action: utter_ask_handoff-en
+  - action: action_handoff_options
+  - intent: affirm-en
+    entities:
+    - handoff_to: Esprit_demo
+  - action: action_handoff
+
+- story: handoff deny
+  steps:
+  - intent: human_handoff-en
+  - action: utter_ask_handoff-en
+  - action: action_handoff_options
+  - intent: deny-en
+  - action: utter_ask_whatelse
+
+###francais
+
+- story: human handoff fr
+  steps:
+  - intent: human_handoff-fr
+  - action: utter_contact_fr
+
+- story: greet + handoff fr
+  steps:
+  - intent: greet-fr
+  - action: action_greet_user-fr
+  - intent: human_handoff-fr
+  - action: utter_contact_fr
+
+- story: handoff fr
+  steps:
+  - intent: human_handoff-fr
+  - action: utter_ask_handoff-fr
+  - action: action_handoff_options-fr
+  - intent: affirm-fr
+  - action: action_handoff-fr
+
+- story: handoff fr
+  steps:
+  - intent: human_handoff-fr
+  - action: utter_ask_handoff-fr
+  - action: action_handoff_options-fr
+  - intent: affirm-fr
+    entities:
+    - handoff_to: Esprit_demo
+  - action: action_handoff-fr
+
+- story: handoff deny fr
+  steps:
+  - intent: human_handoff-fr
+  - action: utter_ask_handoff-fr
+  - action: action_handoff_options-fr
+  - intent: deny-fr
+  - action: utter_ask_whatelse-fr

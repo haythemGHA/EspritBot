@@ -1,0 +1,338 @@
+version: "3.1"
+
+nlu:
+##English
+
+- intent : admission-req-en
+  examples: |
+    - admission procedure
+    - What are the conditions for admission to the Esprit Engineer day course program?
+    - How can I integrate Esprit Engineer day course program?
+    - I want to know about the conditions of admission to the Esprit engineer day course program
+    - What is the procedure to get an admission in Esprit university ?
+    - What is the process of attaining an admission in Esprit university ?
+    - How can I attain an admission in Esprit university ?
+    - I need guidance towards the attainment of admission in Esprit university.
+    - I need information on how to get an admission in Esprit university.
+    - What are the updates with regards to the attainment of admission?
+    - Is there any information available about getting admission in esprit?
+    - How will a student attain admission for the next year ?
+    - what is the admission process
+    - how can I apply for admission
+    - What are the admission requirements for the Esprit Ingénieur program?
+    - What are the stages of admission?
+
+- intent : join-li-en
+  examples: |
+    - In what year can I integrate ESPRIT with a bachelor's degree in computer science?
+    - I have a bachelor's degree in computer science, how can I integrate Esprit?
+
+- intent: bachelor_apply-en
+  examples: |
+    - How can the students from bachelor's apply ?
+    - What are the ways through which the students of bachelor's may apply ?
+    - Is there anyway through which the students of bachelor's can apply ?
+    - What is the procedure for the students from bachelor's to apply ?
+    - What is the process of applying for the students of bachelor's degree ?
+
+- intent: website_apply-en
+  examples: |
+    - I need information on how to apply along with the online admission website.
+    - I need the website for applying and I also want to know what the process of application is ?
+    - What is the procedure of applying and from which website do we have to apply ?
+    - On which website does the application take place and what is its procedure ?
+    - How should I apply and please tell me the website from which I should apply.
+
+- intent: Engineering_apply-en
+  examples: |
+    - What is the information regarding admission in Engineering degree ?
+    - What are the details of getting an admission in Engineering ?
+    - What are the updates with regards to the attainment of admission in Engineering ?
+    - Is there any information available about getting admission in Engineering ?
+    - How will a student attain admission in Engineering ?
+
+- intent: test_and_fee_apply-en  
+  examples: |  
+    - When should I apply for tests and what is the required amount of form fees ?
+    - How much amount is required for form fees and when can one apply for tests ?
+    - I need information on the application of tests and the amount of form fees.
+    - I need details with regard to the date of application of tests and the amount of form fees.
+    - What are the date of application of tests and how much is the amount of form fees ?
+    - When to apply for tests and Form Fee?
+    - When should I apply for tests and what is the required amount of form fees ?
+    - How much amount is required for form fees and when can one apply for tests ?
+    - I need information on the application of tests and the amount of form fees.
+    - I need details with regard to the date of application of tests and the amount of form fees.
+    - What are the date of application of tests and how much is the amount of form fees ?
+
+- intent: how-admission-en
+  examples: |
+    - How is the admission exam?
+    - How's the admission exam is help?
+    - how can we get admission in Esprit
+    - What is the procedure to get an admission in Esprit university ?
+    - What is the process of attaining an admission in Esprit university ?
+    - How can I attain an admission in Esprit university ?
+    - I need guidance towards the attainment of admission in Esprit university.
+    - I need information on how to get an admission in Esprit university.
+
+- intent: when-admission-en
+  examples: |
+    - When it is possible to pre-register on the site
+    - When can I join Esprit?
+    - When does the amdission start?
+    - When does the amdission start?
+    - when are admission held in esprit for admission?
+  
+- intent: past_papers-en
+  examples: |
+    - where can I get sample test papers
+    - sample test papers
+    - past papers
+    - Do anyone have online material for the prepration of Esprit admission test or anylink plz let me know if anyone have??
+    - I need online preparation material for the Esprit admission test.
+    - What are the updates of the links to online material for the preparation of Esprit admission test ?
+    - What is the information regarding the preparation of Esprit admission test through online learning and links ?
+    - Online material and links for the preparation of Esprit university admission test are urgently needed, I need information regarding this ?
+    - Online material for the preparation of Esprit university admission test is required, What are the updates with regards to this ?
+
+
+- intent: admission_schedule-en
+  examples: |
+    - deadline for admission forms?
+    - admissions deadline?
+    - last date to apply?
+    - admission dates?
+    - schedule for admission dates?
+    - when can i apply for admission at Esprit?
+    - when will test take place?
+    - when test will held
+    - when should i apply for test
+    - dates for apply?
+    - dates for admission?
+    - dates for entry test?
+    - dates of application submission?
+    - When can we apply for admission at Esprit?
+    - When will web-site  take place ?
+    - What are the dates to apply for the admission Test ?
+    - when is the last date of the test ?
+    - What would be the last date of the test ?
+    - What is the schedule for the admission Test ?
+    - What is the information regarding the last date of admission test ?
+    - What are the updates about the last date of admission test ?
+    - What are the starting and ending dates of the admissions ?
+    - When will the admission start and end ?
+    - What is the information regarding the opening and closing date of admissions ?
+    - What are the updates with regards to the starting and ending date of admission ?
+    - When will the admissions open and close ?
+    - where result will be announced
+    - when result will be announced for admission test
+    - What are the dates of admission
+    - When to apply for tests ?
+- intent : Esprit-courses-en
+  examples: |
+    - how many courses can we register in Esprit?
+    - how many courses can we opt in Esprit?
+    - course limit in Esprit?
+    - Type of courses in Esprit
+    - What majors are available?
+    - Tell me about the majors available?
+    - Are there several majors available?
+
+
+- intent: offered-programs-en
+  examples: |
+    - What fields of Engineering is offered by Esprit university ?
+    - Engineering in Esprit university is divided into which different offered fields ?
+    - Which fields of Engineering does Esprit university offer to its students ?
+    - What are the sections of Engineering that are offered by Esprit university ?
+    - What sections of Engineering does Esprit university offer ?
+    - which degree programs are being offered for undergraduate students
+    - which degree programs are being offered for graduate students
+    - which degree programs are being offered for post graduates
+    - what different courses are offered
+    - different courses provided by the university
+    - list of different courses
+    - list of different programs
+    - can you help me with the programs esprit university offers
+    - different programs offered by the University
+    - different training programs offered
+    
+- intent: evening-class-en
+  examples: |
+    - Can I have details about the evening course?
+    - I want to inquire about the evening course
+    - Tell me about the evening class
+    - Evening class ??
+    - I need information regarding the evening classes.
+    - What are the details about the classes held in the evening?
+    - What are the updates on the classes that are held in the evening ?
+    - What are the updates about the evening classes ?
+    - Has any information been provided about the evening classes ?
+
+- intent : 3A3B-diff-en
+  examples: |
+    - What is the difference between 3A and 3B?
+    - Is there a difference between 3A and 3B?
+    - What are the different courses available in 3rd year?
+
+- intent: major-info-en
+  examples: |
+    - What is the option
+    - Tell me about the option
+    - I want to know details about the option
+    - The option consists of what
+
+- intent: Specialities-type-en
+  examples: |
+    - What specialities are available in Esprit
+    - What are the specialities in 4th year 
+    - What are the specialities 
+    - Tell me about the specialities in Esprit
+    - Tell me about the [informatique](specialite) in Esprit
+    - Tell me about the [Electromecanique](specialite) in Esprit
+    - Tell me about the [Génie civil](specialite) in Esprit
+    - Tell me about the [Telecommunication](specialite) in Esprit
+    - Tell me about the options in esprit
+    - What are the specialities 
+    - What specialities are available in esprit
+    - What are the options 
+    - Are there any options in esprit
+    - Are there any specialities in Esprit
+    - Tell me about the specialities available in esprit
+    - Tell me about the specialities available in 4th year 
+    - What options are available in 4th year in ESPRIT
+    - What specialities are available in 4th year in Esprit
+    - What are the options in 4th year   
+
+- intent: academic_period-en
+  examples: |
+    - When does the academic year of the university begin and end ? 
+    - What schedule of the academic year does the university follow ? 
+    - When does the academic year of the university start? 
+    - When does the academic year ends?
+
+- intent: fee_structure-en
+  examples: |
+    - what is the inscription fees?
+    - what is the fee structure
+    - what is the tuition fee
+    - I need information of the token fees of Esprit university ?
+    - how much token fees will we have to pay in Esprit university ?
+    - What amount is essential for the payment of token fees in Esprit university ?
+    - How much amount is paid for the token fees in Esprit university ?
+    - I need information on the amount required to be paid as token fees in Esprit university ?
+    - What will the semester fees be If I appear on the merit list?
+    - What is the semester fees of the students who are on the merit list ?
+    - What will my semester fees be after appearing on the merit list ?
+    - How much will my semester fees be if I achieve appearing on the merit list ?
+    - After appearing on the merit list, what will my semester fees be ?
+    - What is the fee structure of Engineering degree ?
+    - How much is the fees of Engineering degree?
+    - What is the amount of fee submission for studying Engineering degree ?
+    - How much fees will one have to pay in order to study Engineering ?
+    - What is the information regarding the fees of Engineering degree ?
+
+- intent: how-finance-en
+  examples: |
+    - how do i finance my education
+    - are there any method for ease of payment
+    - What are the payment terms?
+    - Tell me about the payment terms?
+    - How can I pay the fees?
+- intent: how-much-en
+  examples: |
+    - What is the total cost of the education?
+    - How much does the education cost?
+    - How much does it cost a year at Esprit?
+    - Price
+    - What is the price
+    - Fees
+    - Inscription fees
+
+- intent: self_finance-en
+  examples: |
+    - What is the information regarding the Self-Finance seat ?
+    - What are the details about the Self-Finance seat ?
+    - What are the updates in regards to the Self-Finance seat ?
+    - Is there any information available about the Self-Finance seat ?
+    - I need guidance in regards to the Self-Finance seat.
+
+- intent: hostel-en
+  examples: |
+    - is there hostel available
+    - hostel for girls
+    - hostel facility
+    - oncampus hostel
+    - incampus hostel
+    - The renewal of registrations in hostel
+
+- intent: hostel_fees-en
+  examples: |
+    - What is the total cost of the hostel?
+    - How much does the hostel cost?
+    - How much does it cost a year at the hostel?
+    - Price of hostel
+    - hostel Fees
+    - Inscription in hostel fees
+    - How much fees will one have to pay in order to get hostel ?
+    - What is the information regarding the fees of Esprit Hostel ?
+    - how can i do for inscription in the hostel
+
+- intent: hostel_location-en
+  examples: |
+    - where is the esprit hostel?
+    - how many hostel in esprit 
+    - difference between hostels in esprit 
+    - i want a picture of esprit residense
+    - picture of the hostel 
+    - hostel photos
+
+- intent: restaurant-en
+  examples: |
+    - is there restaurant available?
+    - how can i do for inscription in the restaurant
+    - restaurant in esprit? 
+    - What is the total cost of the restaurant?
+    - How much does the restaurant cost?
+    - How much does it cost a year at the restaurant?
+    - Price of restaurant 
+    - restaurant Fees
+
+- intent: mobility-en
+  examples: |
+    - The possibility of having an international experience
+    - Is it possible to continue my studies abroad?
+    - Are there opportunities to study abroad?
+    
+- intent : internatinal-degree-en
+  examples : |
+    - What is the International Degree Program
+    - Tell me abou the International Degree Program
+
+- intent: Warning-en
+  examples: |
+    - What is minimum score requirement to avoid academic warning? 
+    - how much absence is needed to avoid warning? 
+    - how much absence i need to avoid warning? 
+    - can i avoid warning if i have credit above 45. 
+    - can i avoid warning if i have credit below 45.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

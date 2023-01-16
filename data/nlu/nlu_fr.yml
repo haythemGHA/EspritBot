@@ -1,0 +1,364 @@
+version: "3.1"
+
+nlu:
+##Francais
+
+
+- intent: Esprit-fr
+  examples: |
+    - parlez-moi de l'esprit
+    - veux connaître l'esprit
+    - je veux connaître cette école
+    - esprit université ?
+    - dis m'en plus sur cette université
+    - je veux connaître l'esprit
+    - c'est quoi Esprit ??
+    - pourquoi Esprit
+    - pourquoi choisir esprit ?
+    - pourquoi devrais-je passer à l'esprit?
+    - qu'y a-t-il de si génial à choisir Esprit?
+    - en quoi Esprit est-il meilleur que les autres
+    - pourquoi devrais-je utiliser esprit au lieu d'une autre école ?
+    - Vaut-il mieux choisir Esprit
+    - donnez-moi une raison de choisir Esprit
+    - Pourquoi passer à l'esprit ?
+    - pourquoi étudier dans l'esprit
+    - pourquoi devrais-je choisir esprit
+    - Je voulais dire pourquoi t'es plus que des concurrents ?
+    - pourquoi Esprit est-il utile
+    - pourquoi l'esprit est-il meilleur ?
+    - pourquoi ESPRIT ?
+    - pourquoi devrais-je choisir l'esprit
+    - pourquoi l'esprit est-il si bon?
+    - pourquoi l'esprit est bon
+    - pourquoi ai-je besoin d'esprit
+    - pourquoi seulement l'esprit
+    - pourquoi migrer vers esprit ?
+    - pourquoi passer à l'esprit ?
+    - pourquoi devrais-je utiliser votre formation
+    - pourquoi l'esprit est-il intéressant
+    - Pourquoi esprit?
+    - Pourquoi choisir Esprit ?
+    - pourquoi Esprit ?
+    - Esprit est l'université numéro 1 ?
+    - pourquoi devrais-je choisir l'université Esprit ?
+    - pourquoi Esprit est bon pour moi ?
+    - pourquoi postuler à l'université Esprit ?
+    - pourquoi l'université Esprit ?
+
+- intent: contact-fr
+  examples: |
+    - qui doit être contacté pour plus d'informations sur l'admission
+    - qui dois-je contacter pour obtenir des informations supplémentaires sur l'admission
+    - comment puis-je en savoir plus
+    - qui dois-je contacter pour plus d'informations
+    - Je veux avoir plus d'informations
+    - je veux te contacter
+    - Je veux vos contacts
+    - comment contacter Esprit
+    - détails du contact
+    - comment se connecter avec Esprit
+    - Numéro de contact Esprit
+
+- intent: Esprit-address-fr
+  examples: |
+    - où est Esprit
+    - où se trouve Esprit
+    - Adresse Esprit
+    - Emplacement Esprit
+    - Adresse esprit
+    - emplacement d'Esprit
+    - emplacement d'esprit
+
+- intent: email-complaint-fr
+  examples: |
+    - Je n'ai pas reçu d'e-mail de confirmation de pré-inscription
+    - Je n'ai pas encore reçu de mail d'admission
+
+- intent: interview-reschedule-fr
+  examples: |
+    - Je veux reporter mon entretien.
+    - Je veux retarder mon entretien
+    - Je souhaite reporter mon entretien
+
+- intent: social_events-fr
+  examples : |
+    - quels événements ont lieu à Esprit
+    - quels événements ont lieu à Esprit
+    - événements en Esprit
+    - programmation d'événements chez Esprit
+    - événements sociaux chez Esprit
+    - concert à l'Esprit
+
+- intent: library-fr
+  examples : |
+    - la bibliothèque est-elle disponible chez Esprit
+    - bibliothèque à Esprit
+    - service de bibliothèque à Esprit
+    - bibliothèque à Esprit
+
+- intent: cafeteria-fr
+  examples : |
+    - une cafétéria est-elle disponible à Esprit
+    - cafeteria
+    - cafe
+
+- intent: academic_office-fr
+  examples : |
+    - où se trouve le bureau académique
+    - bureau académique
+    
+
+- intent: director_office-fr
+  examples : |
+    - où se trouve le bureau du directeur
+    - bureau de direction
+    - bureau de directeur
+
+- intent: students_affair-fr
+  examples : |
+    - où se trouve le bureau des affaires étudiantes
+    - bureau des affaires étudiantes
+    - bureau des affaires étudiants
+
+- intent: job_rate-fr
+  examples : |
+    - taux emploi chez Esprit
+    - quel est le taux d'emploi de esprit
+    - quel est le taux d'emploi chez Esprit
+    - taux d'emploi
+    - tarif emploi Esprit
+    - taux d'emploi à l'université Esprit
+    - taux emploi chez Esprit
+    - quel est le taux d'emploi à l'université Esprit
+
+- intent: enter_data-fr
+  examples: |
+    - Un robot de service client
+    - Un robot loup
+    - Je suis [Molka dridi](name)
+    - Je suis [Dhia ben amor](name)
+    - Je suis [Mansour youssef](name)
+    - Je l'ai écrit en [anglais](language)
+    - Je l'ai écrit en [français](language)
+    - Je suis [Gharbi haithem](name)
+    - Je suis [jaidi raed](name)
+    - Je suis [chaaba aicha](name)
+    - Je suis [Sofyenne Bouguerra](name)
+    - C'est [Drew@Mccarthy.com]((email)
+    - Mon email est [Richard@Simmons.com](email)
+    - Je m'appelle [Ashleigh Mees](name)
+    - Je m'appelle [chelsea Parker](name)
+    - Je m'appelle [jessie maglione](name)
+    - Je m'appelle [Kenneth Sherman](name)
+    - Je m'appelle [Lee George](name)
+    - Je m'appelle [Louise Caudill](name)
+    - Je m'appelle [Richard smith](name)
+    - Je m'appelle [Shane Goodyear](name)
+    - Je m'appelle [Sondra Boyd](name)
+    - Je m'appelle si [tom Harbin](name)
+    - C'est [Kim Vanderveen](name)
+    - C'est [Norma Taylor](name)
+    - pouvez-vous essayer [E_Conder@gmail.com](email) à la place?
+    - e-mail = [Patti.Salazar@gmail.com]((email)
+    - je n'en ai pas
+    - je ne l'ai pas
+    - je ne sais pas
+    - je n'en ai pas
+    - c'est en [anglais](language)
+    - c'est en [français](language)
+    - c'est [Katie Betz](name)
+    - c'est [R_Iuliucci@yahoo.com]((email)
+    - c'est [Robert Weir](name)
+    - c'est [Shannon.Adelman@Hurt.com]((email)
+    - langue = [anglais](language)
+    - langue = [français](language)
+    - email [Geneva.Favors@yahoo.com]((email)
+    - peut-être alors à la place [James@Anast.com](email)
+    - mon nom est [Kathy Wright] (name)
+    - mon mail professionnel est [s_Dibenedetto@Simpson.net](email)
+    - mon email est [Carole@Hart.com](email)
+    - mon email est [Elinor_Stock@Higgenbotham.com](email)
+    - mon email est [K_Spivey@yahoo.com](email)
+    - mon email est [Kelly@Coulter.net](email)
+    - mon email est [M_Jones@Luna.com](email)
+    - mon email est [Mia_Gainey@gmail.com](email)
+    - mon email est [S_Calderon@Cofield.com](email)
+    - mon email est [Virginia@Brown.com](email)
+    - mon email est [V_Comley@Nelson.com](email)
+    - je m'appelle [Alexander Kohn](name)
+    - je m'appelle [betty mclendon](name)
+    - je m'appelle [Brian Leung](name)
+    - je m'appelle [Claude Ake](name)
+    - je m'appelle [Earl Ring](name)
+    - je m'appelle [Felicia Cosby](name)
+    - je m'appelle [Frances Kunkle](name)
+    - je m'appelle [Greg King](name)
+    - je m'appelle [james coupable](name)
+    - je m'appelle [Jermaine Mccleery](name)
+    - je m'appelle [John Evers](name)
+    - je m'appelle [Joseph Parson](name)
+    - je m'appelle [Monica Ser](name)
+    - je m'appelle [Nigel Partida](name)
+    - je m'appelle [Staci Simpson](name)
+    - je m'appelle [susan crandall](name)
+    - je m'appelle [Tabitha Schoenthal](name)
+    - mon nom est [Michael Peppers](name)
+    - c'est [Hee@yahoo.com](email)
+    - c'est [P_Simpkins@Suehs.com](email)
+    - tu parles [anglais](language)?
+    - tu parles [français](language)?
+    - l'assistant parle [anglais](language)
+    - l'assistant parle [français](language)
+    - la langue est [anglais](language)
+    - la langue est [français](language)
+    - les gens parlent [anglais](language)
+    - les gens parlent [français](language)
+    - jusqu'à présent c'est seulement en [anglais](language)
+    - jusqu'à présent c'est uniquement en [français](language)
+    - puis-je communiquer avec le bot en [anglais](language)?
+    - puis-je communiquer avec le bot en [français](language)?
+    - peut vous parler en [anglais](language)?
+    - peut vous parler en [français](language)?
+    - Je m'appelle [manuel](name)
+    - Je suis [Aniket](name)
+    - Désolé, ce n'est pas [suleman](name) c'est [Shehzad](name)
+
+- intent: ask_languagesbot-fr
+  examples: |
+    - Êtes-vous familier avec plus d'une langue?
+    - Pouvez-vous communiquer dans d'autres langues?
+    - Pouvez-vous parler plus d'une langue?
+    - Connaissez-vous d'autres langues?
+    - Connaissez-vous d'autres langues ?
+    - Parlez-vous [allemand](language)?
+    - Parlez-vous d'autres langues?
+    - Comprenez-vous [espagnol](language)?
+    - Combien de langues différentes parlez-vous couramment?
+    - Combien de langues maîtrisez-vous?
+    - Combien de langues pouvez-vous parler?
+    - Combien de langues maîtrisez-vous?
+    - Combien de langues parles-tu?
+    - Dans quelles langues parlez-vous suffisamment ?
+    - Dans quelles langues parlez-vous couramment?
+    - Dans quelles langues pouvez-vous parler?
+    - Parlez-vous d'autres langues?
+    - Quelles sont toutes les différentes langues que vous pouvez parler?
+    - Quelles sont les langues que vous pouvez parler ?
+    - De quoi parles-tu ?
+    - Quelles langues parlez-vous couramment?
+    - Dans quelles langues pouvez-vous communiquer?
+    - Dans quelles langues pouvez-vous converser?
+    - Quelles langues pouvez-vous utiliser?
+    - Quelles langues savez-vous utiliser?
+    - Quelles langues connaissez-vous ?
+    - Quelles langues parles-tu?
+    - Quelles langues maîtrisez-vous?
+    - Quelle langues parlez vous?
+    - êtes-vous bilingue?
+    - êtes-vous polyglotte ?
+    - pouvez-vous parler [espagnol](language)?
+    - pouvez-vous parler en [italien](language)?
+    - connaissez-vous [chinois](language)
+    - parlez-vous [néerlandais](language)?
+    - parlez-vous [allemand](language)?
+    - Parlez-vous d'autres langues?
+    - combien de langues parlez-vous couramment?
+    - combien de langues parles-tu?
+    - dis-moi quelques langues que tu connais?
+    - Que savez-vous d'autre que [anglais] (language)?
+    - quelles langues étrangères maîtrisez-vous ?
+    - quelles langues étrangères connaissez-vous ?
+    - quelle langue utilisez-vous
+    - Dans quelles langues êtes-vous à l'aise de parler?
+    - quelles langues maîtrisez-vous ?
+    - quelles langues parlez-vous bien?
+    - quelles langues connaissez-vous ?
+    - quelles langues parles-tu
+    - quelles langues maîtrisez-vous bien ?
+    - quelles langues vous pouvez être à l'aise de parler?
+    - quelles langues maîtrisez-vous bien?
+    - quelles langues tu parles ?
+    - quelles langues tu connais ?
+    - dans quelles langues préférez-vous parler?
+    - quelles langues comprenez-vous ?
+    - tu connais le [français](language)
+    - tu parles [français](language) ?
+    - Je veux parler binaire avec toi
+    - ÊTES-VOUS [ESPAGNOL](language)
+    - on ne peut pas converser en [français](language)?
+    - peut-on converser en [français](language)?
+    - Parlez-vous [italien](language)?
+  
+- intent: human_handoff-fr
+  examples: |
+    - Puis-je parler à quelqu'un qui peut vraiment m'aider ?
+    - Puis-je parler à [Tyrone King](name)?
+    - Je ne veux pas parler à un bot
+    - Je n'aime pas parler à une machine
+    - Je veux parler à un humain
+    - Je veux parler aux fondateurs
+    - y a-t-il aussi des humains qui travaillent pour Esprit ?
+    - puis-je parler à une personne?
+    - Puis-je parler à un humain?
+    - pouvez-vous me transmettre à votre équipe
+    - pouvez-vous s'il vous plaît me mettre en contact avec un vrai employé d'Esprit?
+    - pouvez-vous me mettre en contact avec un humain ?
+    - avez-vous un soutien humain ?
+    - donnez-moi un vrai humain
+    - donne moi un humain
+    - donne-moi un humain maintenant
+    - transfert humain
+    - je ne veux pas parler à un bot
+    - je veux parler à une vraie personne
+    - je veux parler au Service étudiant
+    - je veux parler à un humain
+    - je veux parler à une personne
+    - je veux parler à un humain
+    - je veux parler à quelqu'un chez Esprit
+    - je veux parler à quelqu'un d'autre
+    - je veux parler à quelqu'un qui est plus intelligent que toi
+    - je voudrais parler à une personne
+    - je préfère parler à un vrai employé d'Esprit
+    - J'aimerais parler à un vrai employé d'Esprit
+    - laissez-moi parler avec une personne réelle s'il vous plaît
+    - laissez-moi parler à un humain
+    - laissez-moi parler à une vraie personne
+    - s'il vous plaît donnez-moi un humain
+    - agent de service
+    - quelqu'un du service client
+    - parler à une personne réelle
+    - parler à un bot est stupide
+    - c'est ennuyeux j'aimerais parler à quelqu'un de vrai
+    - ça n'aide pas, puis-je parler à un humain?
+    - faux je veux parler à un humain
+    - puis-je parler à un humain
+    - puis-je parler à votre humain
+    - je veux discuter avec un humain
+    - Comment puis-je parler à un humain
+    - parler avec un humain
+    - Puis-je parler à un humain à la place
+    - tant pis.... tu n'es pas humain... j'ai besoin de parler à une personne vivante
+    - Pouvez-vous demander à un humain de m'aider?
+    - Puis-je parler à un humain ?
+    - Puis-je parler à un humain
+    - Puis-je parler à un humain ?
+    - puis-je parler à un humain
+    - non, je veux parler à un humain
+    - pouvez-vous confier une conversation à un humain?
+    - puis-je parler à l'humain?
+    - puis-je parler à un humain
+    - parler à l'homme
+    - je veux un humain :(
+    - puis-je parler à un humain
+    - je veux parler à un humain \
+    - je veux parler à un humain
+    - puis-je parler à une personne réelle?
+    - me connecter à une personne réelle
+    - J'ai besoin d'une vraie personne
+    - puis-je prendre avec une vraie personne
+    - laissez-moi parler à une vraie personne
+    - laissez-moi parler à une personne réelle s'il vous plaît
+    - je veux parler à une vraie personne
+
+

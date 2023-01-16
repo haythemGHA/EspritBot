@@ -1,0 +1,243 @@
+version: "3.1"
+
+stories:
+- story: language en
+  steps:
+  - intent: greet-en
+  - action: action_greet_user
+  - action: action_language
+  - intent: language
+    entities: 
+        - language: "English"
+  - slot_was_set:
+        - language: "English"
+
+- story: language fr
+  steps:
+  - intent: greet-fr
+  - action: action_greet_user-fr
+  - action: action_language
+  - intent: language
+    entities: 
+        - language: "Francais"
+  - slot_was_set:
+        - language: "Francais"
+
+- story: thanks
+  steps:
+  - intent: thank-en
+  - action: utter_noworries
+  - action: utter_anything_else
+
+- story: bye
+  steps:
+  - intent: goodbye-en
+  - action: utter_goodbye_en
+
+- story: greet
+  steps:
+  - or:
+    - intent: greet-en
+    - intent: enter_data
+      entities:
+      - name: akela
+  - action: action_greet_user
+
+- story: happy path-en
+  steps:
+  - intent: greet-en
+  - action: utter_greet-en
+
+- story: anything else? - no
+  steps:
+  - action: utter_anything_else
+  - intent: deny-en
+  - action: utter_thumbsup
+
+- story: anything else?
+  steps:
+  - action: utter_anything_else
+  - intent: enter_data
+  - action: utter_not_sure-en
+  - action: utter_possibilities-en
+- story: positive reaction
+  steps:
+  - intent: react_positive-en
+  - action: utter_react_positive-en
+
+- story: negative reaction
+  steps:
+  - intent: react_negative-en
+  - action: utter_react_negative-en
+
+- story: neither options
+  steps:
+  - intent: greet-en
+  - action: action_greet_user
+  - intent: deny-en
+  - action: utter_nohelp-en
+
+- story: email-complaint-en yes
+  steps:
+    - intent: email-complaint-en
+    - action: utter_email-complaint_en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_wait_question_en
+- story: email-complaint-en no
+  steps:
+    - intent: email-complaint-en
+    - action: utter_email-complaint_en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_goodbye_en
+
+- story: interview-reschedule-en yes
+  steps:
+    - intent: interview-reschedule-en
+    - action: utter_interview-reschedule_en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_wait_question_en
+- story: interview-reschedule-en no
+  steps:
+    - intent: interview-reschedule-en
+    - action: utter_interview-reschedule_en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_goodbye_en
+
+
+
+- story: Warning yes en
+  steps:
+    - intent: greet-en
+    - action: utter_greet-en
+    - intent: Warning-en
+    - action: utter_Warning-en
+    - action: utter_did_that_help-en
+    - intent: affirm-en
+    - action: utter_thumbsup
+    - action: utter_anything_else
+
+- story: Warning no en
+  steps:
+    - intent: greet-en
+    - action: utter_greet-en
+    - intent: Warning-en
+    - action: utter_Warning-en
+    - action: utter_did_that_help-en
+    - intent: deny-en
+    - action: utter_goodbye_en
+
+###francais
+
+- story: thanks fr
+  steps:
+  - intent: thank-fr
+  - action: utter_noworries-fr
+  - action: utter_anything_else-fr
+
+- story: bye fr
+  steps:
+  - intent: goodbye-fr
+  - action: utter_goodbye_fr
+
+- story: greet fr
+  steps:
+  - or:
+    - intent: greet-fr
+    - intent: enter_data-fr
+      entities:
+      - name: akela
+  - action: action_greet_user-fr
+
+- story: happy path-fr
+  steps:
+  - intent: greet-fr
+  - action: utter_greet-fr
+
+- story: anything else? - no fr
+  steps:
+  - action: utter_anything_else-fr
+  - intent: deny-fr
+  - action: utter_thumbsup
+
+- story: anything else? fr
+  steps:
+  - action: utter_anything_else-fr
+  - intent: enter_data-fr
+  - action: utter_not_sure-fr
+  - action: utter_possibilities-fr
+- story: positive reaction fr
+  steps:
+  - intent: react_positive-fr
+  - action: utter_react_positive-fr
+
+- story: negative reaction fr
+  steps:
+  - intent: react_negative-fr
+  - action: utter_react_negative-fr
+
+- story: neither options fr
+  steps:
+  - intent: greet-fr
+  - action: action_greet_user-fr
+  - intent: deny-fr
+  - action: utter_nohelp-fr
+
+- story: email-complaint-fr yes
+  steps:
+    - intent: email-complaint-fr
+    - action: utter_email-complaint_fr
+    - action: utter_did_that_help-fr
+    - intent: affirm-fr
+    - action: utter_wait_question_fr
+- story: email-complaint-fr no
+  steps:
+    - intent: email-complaint-fr
+    - action: utter_email-complaint_fr
+    - action: utter_did_that_help-fr
+    - intent: deny-fr
+    - action: utter_goodbye_fr
+
+- story: interview-reschedule-fr yes
+  steps:
+    - intent: interview-reschedule-fr
+    - action: utter_interview-reschedule_fr
+    - action: utter_did_that_help-fr
+    - intent: affirm-fr
+    - action: utter_wait_question_fr
+- story: interview-reschedule-fr no
+  steps:
+    - intent: interview-reschedule-fr
+    - action: utter_interview-reschedule_fr
+    - action: utter_did_that_help-fr
+    - intent: deny-fr
+    - action: utter_goodbye_fr
+
+- story: Warning yes fr
+  steps:
+    - intent: greet-fr
+    - action: utter_greet-fr
+    - intent: Warning-fr
+    - action: utter_Warning-fr
+    - action: utter_did_that_help-fr
+    - intent: affirm-fr
+    - action: utter_thumbsup
+    - action: utter_anything_else-fr
+
+- story: Warning no fr
+  steps:
+    - intent: greet-fr
+    - action: utter_greet-fr
+    - intent: Warning-fr
+    - action: utter_Warning-fr
+    - action: utter_did_that_help-fr
+    - intent: deny-fr
+    - action: utter_goodbye_fr
+
+
+
+
+

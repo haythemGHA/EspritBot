@@ -1,0 +1,482 @@
+[
+  {
+    "text": "How is the admission exam?",
+    "intent": "how-admission-en",
+    "intent_prediction": {
+      "name": "admission-req-en",
+      "confidence": 0.4095710515975952
+    }
+  },
+  {
+    "text": "How's the admission exam is help?",
+    "intent": "how-admission-en",
+    "intent_prediction": {
+      "name": "admission-req-en",
+      "confidence": 0.4993578791618347
+    }
+  },
+  {
+    "text": "how can we get admission in Esprit",
+    "intent": "how-admission-en",
+    "intent_prediction": {
+      "name": "admission-req-en",
+      "confidence": 0.4471975266933441
+    }
+  },
+  {
+    "text": "What is the procedure to get an admission in Esprit university ?",
+    "intent": "how-admission-en",
+    "intent_prediction": {
+      "name": "admission-req-en",
+      "confidence": 0.5187737941741943
+    }
+  },
+  {
+    "text": "What is the process of attaining an admission in Esprit university ?",
+    "intent": "how-admission-en",
+    "intent_prediction": {
+      "name": "admission-req-en",
+      "confidence": 0.5779619216918945
+    }
+  },
+  {
+    "text": "How can I attain an admission in Esprit university ?",
+    "intent": "how-admission-en",
+    "intent_prediction": {
+      "name": "admission-req-en",
+      "confidence": 0.5121230483055115
+    }
+  },
+  {
+    "text": "I need guidance towards the attainment of admission in Esprit university.",
+    "intent": "how-admission-en",
+    "intent_prediction": {
+      "name": "admission-req-en",
+      "confidence": 0.44648057222366333
+    }
+  },
+  {
+    "text": "I need information on how to get an admission in Esprit university.",
+    "intent": "how-admission-en",
+    "intent_prediction": {
+      "name": "admission-req-en",
+      "confidence": 0.441902220249176
+    }
+  },
+  {
+    "text": "when are admission held in esprit for admission?",
+    "intent": "when-admission-en",
+    "intent_prediction": {
+      "name": "admission_schedule-en",
+      "confidence": 0.38627660274505615
+    }
+  },
+  {
+    "text": "restaurant Fees",
+    "intent": "restaurant-en",
+    "intent_prediction": {
+      "name": "restaurant-fr",
+      "confidence": 0.45442864298820496
+    }
+  },
+  {
+    "text": "Comment puis-je obtenir une admission à l'université Esprit ?",
+    "intent": "admission-req-fr",
+    "intent_prediction": {
+      "name": "how-admission-fr",
+      "confidence": 0.44258591532707214
+    }
+  },
+  {
+    "text": "J'ai besoin d'orientation vers l'obtention de l'admission à l'université Esprit.",
+    "intent": "admission-req-fr",
+    "intent_prediction": {
+      "name": "how-admission-fr",
+      "confidence": 0.4610609710216522
+    }
+  },
+  {
+    "text": "J'ai besoin d'informations sur la façon d'obtenir une admission à l'université Esprit.",
+    "intent": "admission-req-fr",
+    "intent_prediction": {
+      "name": "how-admission-fr",
+      "confidence": 0.45365917682647705
+    }
+  },
+  {
+    "text": "Quelle est la procédure pour être admis à l'université Esprit ?",
+    "intent": "how-admission-fr",
+    "intent_prediction": {
+      "name": "admission-req-fr",
+      "confidence": 0.4515245258808136
+    }
+  },
+  {
+    "text": "Quel est le processus d'obtention d'une admission à l'université Esprit ?",
+    "intent": "how-admission-fr",
+    "intent_prediction": {
+      "name": "admission-req-fr",
+      "confidence": 0.4592619240283966
+    }
+  },
+  {
+    "text": "Quelles sont les dates d'admission",
+    "intent": "when-admission-fr",
+    "intent_prediction": {
+      "name": "admission_schedule-fr",
+      "confidence": 0.4670749008655548
+    }
+  },
+  {
+    "text": "great!",
+    "intent": "affirm-en",
+    "intent_prediction": {
+      "name": "mood_great-en",
+      "confidence": 0.6312867403030396
+    }
+  },
+  {
+    "text": "oh super",
+    "intent": "affirm-en",
+    "intent_prediction": {
+      "name": "affirm-fr",
+      "confidence": 0.6218533515930176
+    }
+  },
+  {
+    "text": "ok cool",
+    "intent": "affirm-en",
+    "intent_prediction": {
+      "name": "react_positive-en",
+      "confidence": 0.37611570954322815
+    }
+  },
+  {
+    "text": "Cool",
+    "intent": "react_positive-en",
+    "intent_prediction": {
+      "name": "react_positive-fr",
+      "confidence": 0.565403938293457
+    }
+  },
+  {
+    "text": "cool",
+    "intent": "react_positive-en",
+    "intent_prediction": {
+      "name": "react_positive-fr",
+      "confidence": 0.5776389241218567
+    }
+  },
+  {
+    "text": "cool :)",
+    "intent": "react_positive-en",
+    "intent_prediction": {
+      "name": "react_positive-fr",
+      "confidence": 0.5776389241218567
+    }
+  },
+  {
+    "text": "cool!",
+    "intent": "react_positive-en",
+    "intent_prediction": {
+      "name": "react_positive-fr",
+      "confidence": 0.5776389241218567
+    }
+  },
+  {
+    "text": ":)",
+    "intent": "react_positive-en",
+    "intent_prediction": {
+      "name": "react_positive-fr",
+      "confidence": 0.7951076030731201
+    }
+  },
+  {
+    "text": ":D",
+    "intent": "react_positive-en",
+    "intent_prediction": {
+      "name": "react_positive-fr",
+      "confidence": 0.5578075647354126
+    }
+  },
+  {
+    "text": "HAHA",
+    "intent": "react_positive-en",
+    "intent_prediction": {
+      "name": "react_positive-fr",
+      "confidence": 0.6080971956253052
+    }
+  },
+  {
+    "text": "WOW",
+    "intent": "react_positive-en",
+    "intent_prediction": {
+      "name": "react_positive-fr",
+      "confidence": 0.5316811203956604
+    }
+  },
+  {
+    "text": "hAHAHA",
+    "intent": "react_positive-en",
+    "intent_prediction": {
+      "name": "react_positive-fr",
+      "confidence": 0.5239664912223816
+    }
+  },
+  {
+    "text": "hahaha",
+    "intent": "react_positive-en",
+    "intent_prediction": {
+      "name": "react_positive-fr",
+      "confidence": 0.7220655679702759
+    }
+  },
+  {
+    "text": "wow",
+    "intent": "react_positive-en",
+    "intent_prediction": {
+      "name": "react_positive-fr",
+      "confidence": 0.545670211315155
+    }
+  },
+  {
+    "text": "not good",
+    "intent": "react_negative-en",
+    "intent_prediction": {
+      "name": "mood_unhappy-en",
+      "confidence": 0.4741269648075104
+    }
+  },
+  {
+    "text": "I am sad",
+    "intent": "mood_unhappy-en",
+    "intent_prediction": {
+      "name": "react_negative-en",
+      "confidence": 0.7959615588188171
+    }
+  },
+  {
+    "text": "super sad",
+    "intent": "mood_unhappy-en",
+    "intent_prediction": {
+      "name": "react_negative-en",
+      "confidence": 0.7563837766647339
+    }
+  },
+  {
+    "text": "I'm so sad",
+    "intent": "mood_unhappy-en",
+    "intent_prediction": {
+      "name": "react_negative-en",
+      "confidence": 0.7481459379196167
+    }
+  },
+  {
+    "text": "sad",
+    "intent": "mood_unhappy-en",
+    "intent_prediction": {
+      "name": "react_negative-en",
+      "confidence": 0.7426575422286987
+    }
+  },
+  {
+    "text": "very sad",
+    "intent": "mood_unhappy-en",
+    "intent_prediction": {
+      "name": "react_negative-en",
+      "confidence": 0.6360601186752319
+    }
+  },
+  {
+    "text": "so sad",
+    "intent": "mood_unhappy-en",
+    "intent_prediction": {
+      "name": "react_negative-en",
+      "confidence": 0.6765233278274536
+    }
+  },
+  {
+    "text": "Yes",
+    "intent": "track_mailing-en",
+    "intent_prediction": {
+      "name": "affirm-en",
+      "confidence": 0.5135307908058167
+    }
+  },
+  {
+    "text": "NO",
+    "intent": "track_mailing-en",
+    "intent_prediction": {
+      "name": "deny-en",
+      "confidence": 0.6251847147941589
+    }
+  },
+  {
+    "text": "English",
+    "intent": "language",
+    "intent_prediction": {
+      "name": "enter_data",
+      "confidence": 0.7264101505279541
+    }
+  },
+  {
+    "text": "Francais",
+    "intent": "language",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.28163325786590576
+    }
+  },
+  {
+    "text": "ok",
+    "intent": "affirm-fr",
+    "intent_prediction": {
+      "name": "affirm-en",
+      "confidence": 0.7631992101669312
+    }
+  },
+  {
+    "text": "parfait",
+    "intent": "affirm-fr",
+    "intent_prediction": {
+      "name": "mood_great-fr",
+      "confidence": 0.5462948679924011
+    }
+  },
+  {
+    "text": "bonsoir",
+    "intent": "greet-fr",
+    "intent_prediction": {
+      "name": "goodbye-fr",
+      "confidence": 0.702441930770874
+    }
+  },
+  {
+    "text": "génial",
+    "intent": "mood_great-fr",
+    "intent_prediction": {
+      "name": "affirm-fr",
+      "confidence": 0.47076207399368286
+    }
+  },
+  {
+    "text": "étonnante",
+    "intent": "mood_great-fr",
+    "intent_prediction": {
+      "name": "affirm-fr",
+      "confidence": 0.5027378797531128
+    }
+  },
+  {
+    "text": "Je suis triste",
+    "intent": "mood_unhappy-fr",
+    "intent_prediction": {
+      "name": "react_negative-fr",
+      "confidence": 0.7915558218955994
+    }
+  },
+  {
+    "text": "je ne me sens pas très bien",
+    "intent": "mood_unhappy-fr",
+    "intent_prediction": {
+      "name": "react_negative-fr",
+      "confidence": 0.6628360152244568
+    }
+  },
+  {
+    "text": "hyper triste",
+    "intent": "mood_unhappy-fr",
+    "intent_prediction": {
+      "name": "react_negative-fr",
+      "confidence": 0.7854729294776917
+    }
+  },
+  {
+    "text": "Je suis tellement triste",
+    "intent": "mood_unhappy-fr",
+    "intent_prediction": {
+      "name": "react_negative-fr",
+      "confidence": 0.7090575098991394
+    }
+  },
+  {
+    "text": "malheureux",
+    "intent": "mood_unhappy-fr",
+    "intent_prediction": {
+      "name": "react_negative-fr",
+      "confidence": 0.42685267329216003
+    }
+  },
+  {
+    "text": "pas bon",
+    "intent": "mood_unhappy-fr",
+    "intent_prediction": {
+      "name": "react_negative-fr",
+      "confidence": 0.5481391549110413
+    }
+  },
+  {
+    "text": "Oui",
+    "intent": "track_mailing-fr",
+    "intent_prediction": {
+      "name": "affirm-fr",
+      "confidence": 0.6885327100753784
+    }
+  },
+  {
+    "text": "Non",
+    "intent": "track_mailing-fr",
+    "intent_prediction": {
+      "name": "deny-fr",
+      "confidence": 0.8203935623168945
+    }
+  },
+  {
+    "text": "why is esprit so good?",
+    "intent": "Esprit-en",
+    "intent_prediction": {
+      "name": "react_positive-en",
+      "confidence": 0.30712342262268066
+    }
+  },
+  {
+    "text": "cafeteria",
+    "intent": "cafeteria-en",
+    "intent_prediction": {
+      "name": "cafeteria-fr",
+      "confidence": 0.38910213112831116
+    }
+  },
+  {
+    "text": "you speak french?",
+    "intent": "enter_data",
+    "intent_prediction": {
+      "name": "ask_languagesbot-en",
+      "confidence": 0.8382473587989807
+    }
+  },
+  {
+    "text": "service agent",
+    "intent": "human_handoff-en",
+    "intent_prediction": {
+      "name": "human_handoff-fr",
+      "confidence": 0.5069693326950073
+    }
+  },
+  {
+    "text": "cafe",
+    "intent": "cafeteria-fr",
+    "intent_prediction": {
+      "name": "cafeteria-en",
+      "confidence": 0.40445634722709656
+    }
+  },
+  {
+    "text": "tu parles français ?",
+    "intent": "ask_languagesbot-fr",
+    "intent_prediction": {
+      "name": "enter_data-fr",
+      "confidence": 0.4121967852115631
+    }
+  }
+]

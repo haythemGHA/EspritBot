@@ -1,0 +1,4 @@
+handoff_hosts:
+    Esprit_demo:
+      title: "Esprit Assistant"
+      url: "http://localhost:5006"
